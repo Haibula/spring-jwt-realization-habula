@@ -54,7 +54,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
                 .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+                //.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests()
                 .antMatchers("/api/auth/**").permitAll()
                 .antMatchers("/api/test/**").permitAll()
@@ -62,16 +62,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 
-//		http
-//		.authorizeRequests(authorizeRequests ->
-//				authorizeRequests
-//					.antMatchers("/board/*").hasAnyRole("MANAGER", "OPERATOR")
-//					.antMatchers("/members/*").hasRole("MANAGER")
-//					.antMatchers("/").permitAll())
-//		.httpBasic().realmName("org team")
-//		.and()
-//		.sessionManagement()
-//		.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }
 
 }

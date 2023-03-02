@@ -13,6 +13,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.demoauth.configs.jwt.JwtUtils;
@@ -27,7 +28,7 @@ import com.example.demoauth.repository.RoleRepository;
 import com.example.demoauth.repository.UserRepository;
 import com.example.demoauth.service.UserDetailsImpl;
 
-@RestController
+@Controller
 @RequestMapping("/api/auth")
 @CrossOrigin(origins = "*", maxAge = 3600)
 public class AuthController {
@@ -36,6 +37,11 @@ public class AuthController {
     AuthControllerService authControllerService;
     @Autowired
     private UserRepository userRepository;
+
+    @GetMapping("signin")
+    String getLogin(){
+        return "index";
+    }
 
     @PostMapping("/signin")
     public ResponseEntity<?> authUser(@RequestBody LoginRequest loginRequest) {
