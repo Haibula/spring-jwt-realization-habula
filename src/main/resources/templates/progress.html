@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="core.css"/>
+    <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"
+    ></script>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous"
+    />
+    <style>
+        .outer {
+            margin-left: 20%;
+        }
+    </style>
+</head>
+<form onsubmit="
+
+let b = document.getElementById('getAbakar');
+console.log(b.innerText)
+return false
+">
+    <body class="outer">
+    <input id="buttonSub" type="submit" value="ok" />
+    <div class="container m-3">
+        <div>
+            <!-- Navigation Menu-->
+            <ul class="navigation-menu">
+                <li>
+                    <a href="/progress.html" class="active"
+                    ><i class="md md-dashboard"></i> Успеваемость</a
+                    >
+                </li>
+                <li>
+                    <a href="/attendance.html"
+                    ><i class="md md-access-time"></i> Посещаемость</a
+                    >
+                </li>
+            </ul>
+            <!-- End navigation menu        -->
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h4 class="page-title">
+                        <i class="md md-dashboard"></i> Успеваемость
+                    </h4>
+                </div>
+                <p>
+                    <input
+                            class="hidden-xs control-label m-t-20"
+                            type="button"
+                            value="1 Курс"
+                    />
+                    <input
+                            class="hidden-xs control-label m-t-20"
+                            type="button"
+                            value="2 Курс"
+                    />
+                    <input
+                            class="hidden-xs control-label m-t-20"
+                            type="button"
+                            value="3 Курс"
+                    />
+                    <input
+                            class="hidden-xs control-label m-t-20"
+                            type="button"
+                            value="4 Курс"
+                    />
+                </p>
+
+                <div class="col-xs-6">
+                    <div class="form-group m-t-1">
+                        <label class="hidden-xs col-sm-3 control-label m-t-10">
+                            Семестр
+                        </label>
+                        <div class="col-sm-9 col-xs-12">
+                            <select id="sess_id" name="sess_id" class="form-control">
+                                <option value="1">1 семестр Сентябрь</option>
+                                <option value="2">1 семестр Октябрь</option>
+                                <option value="3">1 семестр Ноябрь</option>
+                                <option value="4">1 семестр Декабрь</option>
+                                <option value="4">2 семестр Январь</option>
+                                <option value="4">2 семестр Февраль</option>
+                                <option value="4">2 семестр Март</option>
+                                <option value="4">2 семестр Апрель</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div
+                    id="progressDiv"
+                    class="card-box"
+                    style="position: relative; zoom: 1"
+            >
+                <div class="bootstrap-table table-responsive">
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th class="middle-align">Название дисциплины</th>
+                            <th class="text-center middle-align">ИСРПО</th>
+                            <th class="text-center middle-align">ПОКС</th>
+                            <th class="text-center middle-align">Англ.яз</th>
+                            <th class="text-center middle-align">ПОПД</th>
+                            <th class="text-center middle-align">Психол-я</th>
+                            <th class="text-center middle-align">Физ-ра</th>
+                            <th class="text-center middle-align">Числ.методы</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td id="getAbakar" class="middle-align font-bold">Абакаров. А</td>
+                            <td id="tdGraden1" class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        <tr>
+                            <td class="middle-align font-bold">Алиламагамедов. Г</td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        <tr>
+                            <td class="middle-align font-bold">Гаджиев. И</td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        <tr>
+                            <td class="middle-align font-bold">Гасанов. С</td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        <tr>
+                            <td class="middle-align font-bold">Джанбеков. Р</td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        <tr>
+                            <td class="middle-align font-bold">Имадов. Ш</td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        <tr>
+                            <td class="middle-align font-bold">Курахмаев. О</td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        <tr>
+                            <td class="middle-align font-bold">Магомедов. К</td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        <tr>
+                            <td class="middle-align font-bold">Назаренко. А</td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        <tr>
+                            <td class="middle-align font-bold">Нухов. Т</td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        <tr>
+                            <td class="middle-align font-bold">Омаров. Ш</td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        <tr>
+                            <td class="middle-align font-bold">Сайпулаев. Д</td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        <tr>
+                            <td class="middle-align font-bold">Тагиров. Э</td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        <tr>
+                            <td class="middle-align font-bold">Сулейманов. М</td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        <tr>
+                            <td class="middle-align font-bold">Шахбанов. Х</td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        <tr>
+                            <td class="middle-align font-bold">Гаджимагомедов. К</td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                            <td class="text-center middle-align"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</form>
+
+</html>

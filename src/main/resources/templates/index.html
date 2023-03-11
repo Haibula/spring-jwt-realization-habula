@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="#">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+
+<form
+        onsubmit="
+async function getResult() {
+  const response = await fetch('http://localhost:8080/api/auth/signin', {
+method: 'POST',
+headers: {
+Accept: 'application/json, text/plain',
+'Content-Type': 'application/json;charset=UTF-8',
+},
+body: JSON.stringify({
+username: `${login.value}`,
+password: `${password.value}`,
+}),
+});
+const data = await response.json();
+console.log(data);
+document.cookie = `${data.token}; path=/; Secure; HttpOnly`;
+if (data.username!==null&&data.username!==undefined){
+     window.open(`http://192.168.31.216:8080/api/test/${data.groups}`)
+}
+
+}
+getResult();
+return false;
+">
+    <input type="text" name="login"/><br>
+    <input type="password" name="password"/><br>
+    <input type="submit" value="Sign in"/>
+
+</form>
+
+
+<input type="button" value="controller" onclick="
+async function getResultGet() {
+  const response = await fetch('http://192.168.31.216:8080/api/test/41ks',{
+    headers:{
+        Authorization: `Bearer ${document.cookie}`
+    }
+})
+console.log(document.cookie)
+}
+getResultGet()
+">
+
+</body>
+</html>
