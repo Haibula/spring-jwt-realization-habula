@@ -18,10 +18,10 @@ INSERT INTO roles(name) VALUES('ROLE_ADMIN');
 `POST localhost:8080/api/auth/signup`
 ```
 {
-    "username": "admin",
-    "email": "admin@gmail.com",
-    "password": "12345678",
-    "role": ["admin, moderator"]
+    "username": "admin221121",
+    "password": "123",
+    "groups":"41ks", // no null
+    "roles": ["admin"]
 }
 ```
 

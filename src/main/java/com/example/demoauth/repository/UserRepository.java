@@ -11,5 +11,7 @@ import com.example.demoauth.models.User;
 public interface UserRepository extends JpaRepository<User, Long>{
 	Optional<User> findByUsername(String username);
 	Boolean existsByUsername(String username);
-	Boolean existsByEmail(String email);
+	Boolean existsByGroups(String groups);
+
+
 }

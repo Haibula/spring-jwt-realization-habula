@@ -4,29 +4,30 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import com.example.demoauth.models.User;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+@Data
 public class UserDetailsImpl implements UserDetails {
 
 	private static final long serialVersionUID = 1L;
 
 	private Long id;
 	private String username;
-	private String email;
+	private String groups;
 	@JsonIgnore
 	private String password;
 	private Collection<? extends GrantedAuthority> authorities;
 
-	public UserDetailsImpl(Long id, String username, String email, String password,
+	public UserDetailsImpl(Long id, String username, String groups, String password,
 			Collection<? extends GrantedAuthority> authorities) {
 		this.id = id;
 		this.username = username;
-		this.email = email;
+		this.groups = groups;
 		this.password = password;
 		this.authorities = authorities;
 	}
@@ -39,7 +40,7 @@ public class UserDetailsImpl implements UserDetails {
 		return new UserDetailsImpl(
 				user.getId(), 
 				user.getUsername(), 
-				user.getEmail(), 
+				user.getGroups(),
 				user.getPassword(), 
 				authorities);
 	}
@@ -58,14 +59,7 @@ public class UserDetailsImpl implements UserDetails {
 	public String getUsername() {
 		return username;
 	}
-	
-	public Long getId() {
-		return id;
-	}
-	
-	public String getEmail() {
-		return email;
-	}
+
 
 	@Override
 	public boolean isAccountNonExpired() {
@@ -111,5 +105,5 @@ public class UserDetailsImpl implements UserDetails {
 			return false;
 		return true;
 	}
-	
+
 }

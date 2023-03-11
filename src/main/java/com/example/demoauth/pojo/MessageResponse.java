@@ -1,5 +1,8 @@
 package com.example.demoauth.pojo;
 
+import lombok.Data;
+
+@Data
 public class MessageResponse {
 	
 	private String message;
@@ -8,12 +11,6 @@ public class MessageResponse {
 		this.message = message;
 	}
 
-	public String getMessage() {
-		return message;
-	}
 
-	public void setMessage(String message) {
-		this.message = message;
-	}
 		
 }
