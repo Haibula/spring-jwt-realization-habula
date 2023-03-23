@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="shortcut icon" href="#">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,300;1,400&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main-register.css"/>
 </head>
-<body>
 
+<body>
 <form
         onsubmit="
 async function getResult() {
@@ -27,31 +33,60 @@ const data = await response.json();
 console.log(data);
 document.cookie = `${data.token}; path=/; Secure; HttpOnly`;
 if (data.username!==null&&data.username!==undefined){
-     window.open(`http://192.168.31.216:8080/api/test/${data.groups}`)
+     window.open(`http://localhost:8080/api/test/${data.groups}/september`)
+     localStorage.clear();
 }
 
 }
 getResult();
 return false;
-">
-    <input type="text" name="login"/><br>
-    <input type="password" name="password"/><br>
-    <input type="submit" value="Sign in"/>
+"
+>
 
+    <div class="wrapper">
+      <span class="icon-close">
+        <ion-icon name="close-outline"></ion-icon>
+      </span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-boxing">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="text" name="login" required/>
+                    <label>login</label>
+                </div>
+                <div class="input-boxing">
+            <span class="icon"
+            ><ion-icon name="lock-closed-outline"></ion-icon
+            ></span>
+                    <input type="password" name="password" maxlength="16" required/>
+                    <label>Password</label>
+                </div>
+                <div class="rememver-forgot">
+                    <input
+                            type="checkbox"
+                            class="custom-checkbox"
+                            id="happy"
+                            name="happy"
+                            value="yes"
+                    />
+
+                </div>
+                <button type="submit" class="btn-login-form">Вход</button>
+
+            </form>
+        </div>
+    </div>
 </form>
 
-
-<input type="button" value="controller" onclick="
-async function getResultGet() {
-  const response = await fetch('http://192.168.31.216:8080/api/test/41ks',{
-    headers:{
-        Authorization: `Bearer ${document.cookie}`
-    }
-})
-console.log(document.cookie)
-}
-getResultGet()
-">
+<script
+        type="module"
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+></script>
 
 </body>
 </html>

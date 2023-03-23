@@ -17,8 +17,6 @@ public class AuthController {
 
     @Autowired
     AuthControllerService authControllerService;
-    @Autowired
-    private UserRepository userRepository;
 
     @GetMapping("signin")
     String getLogin(){

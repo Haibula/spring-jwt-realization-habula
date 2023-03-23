@@ -1,0 +1,57 @@
+*{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+body{
+    background-color: #dfdfdf;
+}
+.ren{
+    position: relative;
+    display: flex;
+    margin:15px auto auto auto;
+    background-color: rgb(255, 255, 255);
+    width: 1200px;
+    height: 900px;
+    border-radius: 5px;
+}
+.nav-bar{
+    background-color: #24018A;
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+.nav-bar .student{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 30px;
+}
+.nav-bar a{
+    color: #ffffff;
+}
+.nav-bar .logo{
+    display: flex;
+    font-size: 4em;
+}
+.nav-bar .defender{
+    display: flex;
+}
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+}
+.nav-bar .nav-links ul{
+    display: flex;
+}
+.nav-bar .nav-links ul li {
+    margin: 0 30px;
+    font-size: 20px;
+}
