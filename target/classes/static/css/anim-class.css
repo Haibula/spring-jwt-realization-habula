@@ -1,0 +1,22 @@
+.activ-solo{
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    display: inline-block;
+    position: relative;
+    transition: all 200ms;
+
+}
+.activ-solo::after{
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    transition: all 200ms;
+    color: rgb(0, 0, 0);
+}
+.activ-solo:hover:after{
+    right: 0;
+}

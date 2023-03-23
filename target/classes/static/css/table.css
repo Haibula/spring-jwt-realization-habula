@@ -1,0 +1,32 @@
+.class-spisoc{
+    display: flex;
+    margin:205px auto;
+    font-size: 15px;
+    align-items: flex-start;
+}
+table{
+    border-radius: 2px;
+    background-color: rgb(222, 222, 222);
+}
+.table th {
+	background: #2c00b0;
+    color: #fff;
+    font-style: italic;
+    font-weight: 500;
+}
+.table tbody tr:nth-child(odd){
+	background: #fff;
+}
+.table tbody tr:nth-child(even){
+	background: #f4f4f481;
+}
+th{ 
+    border-radius: 2px;
+    text-align: center;
+    padding: 15px 39.5px;
+}
+
+td{
+    border-radius: 2px;
+    padding: 10px;
+}
