@@ -12,7 +12,7 @@ options.forEach(option => {
         console.log(selectedOption)
         localStorage.setItem("month", selectedOption)
         optionMenu.classList.remove("active");
+
     })
 })
-
 

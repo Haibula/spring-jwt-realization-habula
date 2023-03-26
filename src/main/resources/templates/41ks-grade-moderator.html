@@ -942,6 +942,8 @@
     <script>
         if (localStorage.getItem('month') !== null) {
             sBtn_text.innerText = localStorage.getItem('month')
+        }else {
+            localStorage.setItem("month", "1 семестр Сентябрь")
         }
     </script>
 </form>

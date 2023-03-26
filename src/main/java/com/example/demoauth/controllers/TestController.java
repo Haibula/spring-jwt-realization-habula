@@ -1,7 +1,9 @@
 package com.example.demoauth.controllers;
 
 import com.example.demoauth.models.Grade41ks;
+import com.example.demoauth.models.Progress;
 import com.example.demoauth.repository.GradeRepository;
+import com.example.demoauth.repository.ProgressRepository;
 import com.example.demoauth.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -19,6 +21,8 @@ public class TestController {
     UserRepository userRepository;
     @Autowired
     GradeRepository gradeRepository;
+    @Autowired
+    ProgressRepository progressRepository;
 
     @GetMapping("/42ks/{month}")
     @PreAuthorize("hasRole('42KS')or hasRole('MODERATOR')")
@@ -65,6 +69,20 @@ public class TestController {
 
     }
 
+    @GetMapping("/41ks/progress")
+    @PreAuthorize("hasRole('41KS')or hasRole('MODERATOR')")
+    public String user41ksProgress(Model model) {
+        List<Progress> res = progressRepository.findAll();
+
+        for (int i = 0; i < 20; i++) {
+            res.add(new Progress());
+        }
+
+        model.addAttribute("post", res);
+
+
+        return "41ks-progress";
+    }
 
     @GetMapping("/moderator/{month}")
     @PreAuthorize("hasRole('MODERATOR')")
@@ -135,7 +153,7 @@ public class TestController {
 
         }
 
-        return "redirect:/api/test/moderator/september";
+        return "redirect:/api/test/moderator/{month}";
     }
 
     @GetMapping("/moderator/progress")
@@ -143,6 +161,76 @@ public class TestController {
     public String moder41ksProgress() {
 
         return "41ks-progress-moderator";
+    }
+
+    @PostMapping("/moderator/progress")
+    public String moderPostProgress(@RequestParam String user1Grades,
+                                    @RequestParam String user2Grades,
+                                    @RequestParam String user3Grades,
+                                    @RequestParam String user4Grades,
+                                    @RequestParam String user5Grades,
+                                    @RequestParam String user6Grades,
+                                    @RequestParam String user7Grades,
+                                    @RequestParam String user8Grades,
+                                    @RequestParam String user9Grades,
+                                    @RequestParam String user10Grades,
+                                    @RequestParam String user11Grades,
+                                    @RequestParam String user12Grades,
+                                    @RequestParam String user13Grades,
+                                    @RequestParam String user14Grades,
+                                    @RequestParam String user15Grades,
+                                    @RequestParam String user16Grades) {
+        System.out.println(user1Grades);
+        try {
+            String[] splitUser1Grades = user1Grades.split(",");
+            String[] splitUser2Grades = user2Grades.split(",");
+            String[] splitUser3Grades = user3Grades.split(",");
+            String[] splitUser4Grades = user4Grades.split(",");
+            String[] splitUser5Grades = user5Grades.split(",");
+            String[] splitUser6Grades = user6Grades.split(",");
+            String[] splitUser7Grades = user7Grades.split(",");
+            String[] splitUser8Grades = user8Grades.split(",");
+            String[] splitUser9Grades = user9Grades.split(",");
+            String[] splitUser10Grades = user10Grades.split(",");
+            String[] splitUser11Grades = user11Grades.split(",");
+            String[] splitUser12Grades = user12Grades.split(",");
+            String[] splitUser13Grades = user13Grades.split(",");
+            String[] splitUser14Grades = user14Grades.split(",");
+            String[] splitUser15Grades = user15Grades.split(",");
+            String[] splitUser16Grades = user16Grades.split(",");
+
+            ArrayList<Progress> arrayList = new ArrayList<>();
+            arrayList.add(new Progress(splitUser1Grades));
+            arrayList.add(new Progress(splitUser2Grades));
+            arrayList.add(new Progress(splitUser3Grades));
+            arrayList.add(new Progress(splitUser4Grades));
+            arrayList.add(new Progress(splitUser5Grades));
+            arrayList.add(new Progress(splitUser6Grades));
+            arrayList.add(new Progress(splitUser7Grades));
+            arrayList.add(new Progress(splitUser8Grades));
+            arrayList.add(new Progress(splitUser9Grades));
+            arrayList.add(new Progress(splitUser10Grades));
+            arrayList.add(new Progress(splitUser11Grades));
+            arrayList.add(new Progress(splitUser12Grades));
+            arrayList.add(new Progress(splitUser13Grades));
+            arrayList.add(new Progress(splitUser14Grades));
+            arrayList.add(new Progress(splitUser15Grades));
+            arrayList.add(new Progress(splitUser16Grades));
+
+            progressRepository.saveAll(arrayList);
+
+
+        } catch (Exception ignore) {
+
+        }
+        return "redirect:/api/test/moderator/progress";
+    }
+
+    @GetMapping("/admin/{month}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public String admin() {
+
+        return "admin";
     }
 
 }

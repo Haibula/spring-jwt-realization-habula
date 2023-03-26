@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/anim-class.css">
+    <link rel="stylesheet" href="/css/bg.css">
+    <link rel="stylesheet" href="/css/likk.css">
+    <link rel="stylesheet" href="/css/table.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>DATA</title>
+</head>
+<body>
+<form
+        onsubmit="
+const optionMenu = document.querySelector('select');
+let res;
+if(optionMenu.options.item(0).selected){
+    res = optionMenu.options.item(0).innerHTML.substring(optionMenu.options.item(0).innerHTML.indexOf(' '));
+}else if(optionMenu.options.item(1).selected){
+    res = optionMenu.options.item(1).innerHTML.substring(optionMenu.options.item(1).innerHTML.indexOf(' '));
+}else if(optionMenu.options.item(3).selected){
+    res = optionMenu.options.item(3).innerHTML.substring(optionMenu.options.item(3).innerHTML.indexOf(' '));
+}else if(optionMenu.options.item(4).selected){
+    res = optionMenu.options.item(4).innerHTML.substring(optionMenu.options.item(4).innerHTML.indexOf(' '));
+}
+async function getResult() {
+  const response = await fetch('http://localhost:8080/api/auth/signup', {
+method: 'POST',
+headers: {
+Accept: 'application/json, text/plain',
+'Content-Type': 'application/json;charset=UTF-8',
+},
+body: JSON.stringify({
+username: `${login.value}`,
+password: `${password.value}`,
+groups: `${groups.value}`,
+roles: [res]
+}),
+});
+const data = await response.json();
+console.log(data);
+
+}
+getResult();
+return false;
+"
+>
+
+    <div class="ren">
+        <div class="nav-bar">
+            <div class="logo"><a href="#" class="defender">
+                <ion-icon name="school-outline"></ion-icon>
+                <a href="#"
+                   class="student">[ADMIN]</a></a></div>
+            <div class="nav-links">
+
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="title">
+                <img src="/css/gerb_madi.jpg">
+                Вход для студента
+            </div>
+            <div class="form">
+                <div class="input_field">
+                    <!-- <label>Фамилия</label> -->
+                    <input type="text" class="input" name="login" placeholder="Логин">
+                </div>
+                <div class="input_field">
+                    <!-- <label>Имя</label> -->
+                    <input type="text" class="input" name="password" placeholder="Пароль">
+                </div>
+                <div class="input_field">
+                    <!-- <label>Отчество</label> -->
+                    <input type="text" class="input" name="groups" placeholder="Группа(41ks..и.т.д)">
+                </div>
+                <div class="group-column">
+                    <div class="input_field">
+                        <div class="custom_select">
+                            <select>
+                                <option value="group-one">группа 41ks</option>
+                                <option value="group-two">группа 42ks</option>
+                                <option value="group-three">группа 43ks</option>
+                                <option value="group-three">группа moderator</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <div class="input_field">
+                    <input type="submit" value="Зарегистрировать" class="btn">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+</body>
+
+</html>
