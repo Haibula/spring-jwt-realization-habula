@@ -36,7 +36,6 @@ if(optionMenu.options.item(0).selected){
 }else if(optionMenu.options.item(4).selected){
     res = optionMenu.options.item(4).innerHTML.substring(optionMenu.options.item(4).innerHTML.indexOf(' '));
 }
-console.log(res)
 async function getResult() {
   const response = await fetch('http://localhost:8080/api/auth/signup', {
 method: 'POST',
@@ -78,7 +77,7 @@ return false;
             <div class="form">
                 <div class="input_field">
                     <!-- <label>Фамилия</label> -->
-                    <input type="text" class="input" name="login" placeholder="Название группы(Логин)">
+                    <input type="text" class="input" name="login" placeholder="Логин">
                 </div>
                 <div class="input_field">
                     <!-- <label>Имя</label> -->

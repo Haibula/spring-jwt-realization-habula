@@ -10,13 +10,11 @@ body{
     background-color: #dfdfdf;
 }
 .ren{
-    position: relative;
     display: flex;
-    margin:15px auto auto auto;
-    background-color: rgb(255, 255, 255);
-    width: 1200px;
-    height: 900px;
-    border-radius: 5px;
+    font-size: 15px;
+    align-items: flex-start;
+    margin:5px 5px 5px 5px;
+
 }
 .nav-bar{
     background-color: #24018A;
@@ -25,8 +23,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 2177px;
     box-sizing: border-box;
+
 }
 .nav-bar .student{
     display: flex;

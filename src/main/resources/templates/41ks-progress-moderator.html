@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charget="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
 </head>
 <body>
 
-<form method="post" >
+<form method="post">
 
     <div class="ren">
         <div class="nav-bar">
@@ -35,7 +35,7 @@
                         <a class="activ-solo" id="nas" href="">Успеваемость</a>
                     </li>
                     <li>
-                        <a class="activ-solo" >Посещаемость</a>
+                        <a class="activ-solo">Посещаемость</a>
                     </li>
                 </ul>
             </div>
@@ -60,7 +60,8 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th class="middle-align-one-lens">Месяц</th>
+                    <th class="middle-align-one-lens">№</th>
+                    <th class="middle-align-one-lens">Студент</th>
                     <th class="text-center">Сентябрь</th>
                     <th class="text-center">Октябрь</th>
                     <th class="text-center">Ноябрь</th>
@@ -74,50 +75,73 @@
                 <tbody>
                 <!--                    user1-->
                 <tr>
+                    <!--                    ид-->
+                <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  id="user1Grades"
-                               name="user1Grades"
-                               placeholder="Инициалы" minlength="1">
+                        <input type="text" class="text-input-user" readonly name="user1Grades"
+                               placeholder="ид"
+                               minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user1Grades"
-                               placeholder="Кл.п"
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getUsername()}"
+                               placeholder="Инициалы"
                                minlength="1"
-                               maxlength="3" size="3">
+                               size="2">
                     </td>
-
+                    <!--                    Сентябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user1Grades"
-                               placeholder="Кл.п"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user1Grades"
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user1Grades"
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getPassOctober()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Ноябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user1Grades"
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user1Grades"
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user1Grades"
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getPassJanuary()}"
+                               placeholder="Кл.п"
+                               minlength="1"
+                               maxlength="3" size="2">
+                    </td>
+                    <!--                    Февраль-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getPassFebruary()}"
+                               placeholder="Кл.п"
+                               minlength="1"
+                               maxlength="3" size="2">
+                    </td>
+                    <!--                    Март-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
@@ -125,49 +149,72 @@
                 </tr>
                 <!--                    user2-->
                 <tr>
+                    <!--                    ид-->
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  name="user2Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user2Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user2Grades"
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="2">
+                    </td>
+                    <!--                    Сентябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user2Grades"
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getPassOctober()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Ноябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user2Grades"
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user2Grades"
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user2Grades"
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getPassJanuary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Февраль-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user2Grades"
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getPassFebruary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Март-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user2Grades"
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
@@ -175,49 +222,72 @@
                 </tr>
                 <!--                    user3-->
                 <tr>
+                    <!--                    ид-->
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  name="user3Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user3Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user3Grades"
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="2">
+                    </td>
+                    <!--                    Сентябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user3Grades"
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getPassOctober()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Ноябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user3Grades"
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user3Grades"
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user3Grades"
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getPassJanuary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Февраль-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user3Grades"
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getPassFebruary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Март-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user3Grades"
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
@@ -225,49 +295,72 @@
                 </tr>
                 <!--                    user4-->
                 <tr>
+                    <!--                    ид-->
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  name="user4Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user4Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user4Grades"
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="2">
+                    </td>
+                    <!--                    Сентябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user4Grades"
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getPassOctober()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Ноябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user4Grades"
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user4Grades"
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user4Grades"
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getPassJanuary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Февраль-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user4Grades"
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getPassFebruary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Март-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user4Grades"
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
@@ -275,49 +368,72 @@
                 </tr>
                 <!--                    user5-->
                 <tr>
+                    <!--                    ид-->
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  name="user5Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user5Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user5Grades"
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="2">
+                    </td>
+                    <!--                    Сентябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user5Grades"
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getPassOctober()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Ноябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user5Grades"
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user5Grades"
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user5Grades"
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getPassJanuary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Февраль-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user5Grades"
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getPassFebruary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Март-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user5Grades"
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
@@ -325,49 +441,72 @@
                 </tr>
                 <!--                    user6-->
                 <tr>
+                    <!--                    ид-->
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  name="user6Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user6Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user6Grades"
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="2">
+                    </td>
+                    <!--                    Сентябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user6Grades"
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getPassOctober()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Ноябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user6Grades"
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user6Grades"
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user6Grades"
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getPassJanuary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Февраль-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user6Grades"
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getPassFebruary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Март-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user6Grades"
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
@@ -375,49 +514,72 @@
                 </tr>
                 <!--                    user7-->
                 <tr>
+                    <!--                    ид-->
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  name="user7Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user7Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user7Grades"
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="2">
+                    </td>
+                    <!--                    Сентябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user7Grades"
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getPassOctober()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Ноябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user7Grades"
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user7Grades"
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user7Grades"
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getPassJanuary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Февраль-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user7Grades"
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getPassFebruary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Март-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user7Grades"
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
@@ -425,49 +587,72 @@
                 </tr>
                 <!--                    user8-->
                 <tr>
+                    <!--                    ид-->
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  name="user8Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user8Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user8Grades"
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="2">
+                    </td>
+                    <!--                    Сентябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user8Grades"
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getPassOctober()}"
+                               placeholder="Кл.п"
+                               minlength="1"
+                               maxlength="3" size="2">
+
+                        <!--                    Ноябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user8Grades"
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user8Grades"
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getPassJanuary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Февраль-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user8Grades"
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getPassFebruary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Март-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user8Grades"
-                               placeholder="Кл.п"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user8Grades"
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
@@ -475,49 +660,72 @@
                 </tr>
                 <!--                    user9-->
                 <tr>
+                    <!--                    ид-->
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  name="user9Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user9Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user9Grades"
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="2">
+                    </td>
+                    <!--                    Сентябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user9Grades"
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getPassOctober()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Ноябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user9Grades"
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user9Grades"
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user9Grades"
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getPassJanuary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Февраль-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user9Grades"
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getPassFebruary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Март-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user9Grades"
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
@@ -525,49 +733,72 @@
                 </tr>
                 <!--                    user10-->
                 <tr>
+                    <!--                    ид-->
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  name="user10Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user10Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user10Grades"
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="2">
+                    </td>
+                    <!--                    Сентябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user10Grades"
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getPassOctober()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Ноябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user10Grades"
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user10Grades"
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user10Grades"
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getPassJanuary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Февраль-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user10Grades"
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getPassFebruary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Март-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user10Grades"
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
@@ -575,49 +806,72 @@
                 </tr>
                 <!--                    user11-->
                 <tr>
+                    <!--                    ид-->
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  name="user11Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user11Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user11Grades"
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="2">
+                    </td>
+                    <!--                    Сентябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user11Grades"
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getPassOctober()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Ноябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user11Grades"
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user11Grades"
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user11Grades"
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getPassJanuary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Февраль-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user11Grades"
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getPassFebruary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Март-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user11Grades"
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
@@ -625,49 +879,72 @@
                 </tr>
                 <!--                    user12-->
                 <tr>
+                    <!--                    ид-->
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  name="user12Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user12Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user12Grades"
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="2">
+                    </td>
+                    <!--                    Сентябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user12Grades"
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getPassOctober()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Ноябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user12Grades"
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user12Grades"
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user12Grades"
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getPassJanuary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Февраль-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user12Grades"
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getPassFebruary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Март-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user12Grades"
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
@@ -675,49 +952,72 @@
                 </tr>
                 <!--                    user13-->
                 <tr>
+                    <!--                    ид-->
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  name="user13Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user13Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user13Grades"
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="2">
+                    </td>
+                    <!--                    Сентябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user13Grades"
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getPassOctober()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Ноябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user13Grades"
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user13Grades"
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user13Grades"
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getPassJanuary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Февраль-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user13Grades"
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getPassFebruary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Март-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user13Grades"
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
@@ -725,49 +1025,72 @@
                 </tr>
                 <!--                    user14-->
                 <tr>
+                    <!--                    ид-->
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  name="user14Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user14Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user14Grades"
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="2">
+                    </td>
+                    <!--                    Сентябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user14Grades"
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getPassOctober()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Ноябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user14Grades"
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user14Grades"
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user14Grades"
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getPassJanuary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Февраль-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user14Grades"
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getPassFebruary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Март-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user14Grades"
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
@@ -775,49 +1098,72 @@
                 </tr>
                 <!--                    user15-->
                 <tr>
+                    <!--                    ид-->
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  name="user15Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user15Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user15Grades"
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="2">
+                    </td>
+                    <!--                    Сентябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user15Grades"
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getPassOctober()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Ноябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user15Grades"
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user15Grades"
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user15Grades"
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getPassJanuary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Февраль-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user15Grades"
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getPassFebruary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Март-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user15Grades"
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
@@ -825,49 +1171,72 @@
                 </tr>
                 <!--                    user16-->
                 <tr>
+                    <!--                    ид-->
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-user"  name="user16Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user16Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <!--                    Инициалы-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user16Grades"
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="2">
+                    </td>
+                    <!--                    Сентябрь-->
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getPassSeptember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Октябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user16Grades"
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getPassOctober()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Ноябрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user16Grades"
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getPassNovember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Декабрь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user16Grades"
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getPassDecember()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Январь-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user16Grades"
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getPassJanuary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Февраль-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user16Grades"
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getPassFebruary()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">
                     </td>
+                    <!--                    Март-->
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user"  name="user16Grades"
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getPassMarch()}"
                                placeholder="Кл.п"
                                minlength="1"
                                maxlength="3" size="2">

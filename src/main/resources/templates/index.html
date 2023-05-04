@@ -17,32 +17,39 @@
 <body>
 <form
         onsubmit="
-async function getResult() {
+    async function getResult() {
   const response = await fetch('http://localhost:8080/api/auth/signin', {
-method: 'POST',
-headers: {
-Accept: 'application/json, text/plain',
-'Content-Type': 'application/json;charset=UTF-8',
-},
-body: JSON.stringify({
-username: `${login.value}`,
-password: `${password.value}`,
-}),
-});
-const data = await response.json();
-console.log(data);
-document.cookie = `${data.token}; path=/; Secure; HttpOnly`;
-if (data.username!==null&&data.username!==undefined){
-     window.open(`http://localhost:8080/api/test/${data.groups}/september`)
+    method: 'POST',
+    headers: {
+    Accept: 'application/json, text/plain',
+    'Content-Type': 'application/json;charset=UTF-8',
+    },
+    body: JSON.stringify({
+    username: `${login.value}`,
+    password: `${password.value}`,
+    }),
+    });
+    const data = await response.json();
+    console.log(data);
+    document.cookie = `${data.token}; path=/; Secure; HttpOnly`;
+    if (data.username!==null&&data.username!==undefined){
+        let role;
+        if (data.groups.includes('moderator')){
+        role = 'moderator';
+    }else if(data.groups.includes('admin')){
+         role = 'admin';
+    }else{
+        role = 'students';
+    }
+     window.open(`http://localhost:8080/api/${role}/${data.groups}/course_1/september`)
      localStorage.clear();
-}
+    }
 
-}
-getResult();
-return false;
-"
+    }
+    getResult();
+    return false;
+    "
 >
-
     <div class="wrapper">
       <span class="icon-close">
         <ion-icon name="close-outline"></ion-icon>

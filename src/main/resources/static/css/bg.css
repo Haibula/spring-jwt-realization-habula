@@ -31,9 +31,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 2177px;
     font-size: 20px;
     box-sizing: border-box;
+
+
 }
 .main-tron-oll{
     background-color: rgb(240, 240, 240);

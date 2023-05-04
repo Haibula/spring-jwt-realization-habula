@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/anim-class.css">
+    <link rel="stylesheet" href="/css/bg.css">
+    <link rel="stylesheet" href="/css/likk.css">
+    <link rel="stylesheet" href="/css/table.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>DATA</title>
+</head>
+<body>
+
+<div class="ren">
+    <div class="nav-bar">
+        <div class="logo"><a href="#" class="defender">
+            <ion-icon name="school-outline"></ion-icon>
+            <a href="#"
+               class="student">[41KS]</a></a></div>
+        <div class="nav-links">
+            <ul>
+                <li>
+                    <a class="activ-solo">Успеваемость</a>
+                </li>
+                <li>
+                    <a class="activ-solo" href="progressIS11">Посещаемость</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <br/>
+    <div class="main-tron">
+        <div class="col-xs-1-1">
+            <div class="page-title">
+                <i class="md md-dashboard"></i> Успеваемость
+            </div>
+            <p>
+                <input class="hidden-xs-control-label-m-t-20" type="button" value="1 Курс"/>
+                <input class="hidden-xs-control-label-m-t-20" type="button" value="2 Курс"/>
+                <input class="hidden-xs-control-label-m-t-20" type="button" value="3 Курс"/>
+                <input class="hidden-xs-control-label-m-t-20" type="button" value="4 Курс"/>
+            </p>
+        </div>
+        <div class="col-xs-1-2">
+            <div class="form-group-m-t-1">
+                <label class="hidden-xs col-sm-3 control-label m-t-10">
+                    Семестр
+                </label>
+                <div class="col-sm-9 col-xs-12">
+                    <div class="select-menu">
+                        <div class="select-btn">
+                            <span class="sBtn-text">1 семестр Сентябрь</span>
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <ul class="options">
+                            <li class="option">
+                                <a href="september">
+                                    <span class="option-text">1 семестр Сентябрь</span>
+                                </a>
+
+                            </li>
+                            <li class="option">
+                                <a href="october">
+                                    <span class="option-text">1 семестр Октябрь</span>
+                                </a>
+                            </li>
+                            <li class="option">
+                                <a href="november">
+                                    <span class="option-text">1 семестр Ноябрь</span>
+                                </a>
+                            </li>
+                            <li class="option">
+                                <a href="december">
+                                    <span class="option-text">1 семестр Декабрь</span>
+                                </a>
+                            </li>
+                            <li class="option">
+                                <a href="january">
+                                    <span class="option-text">2 семестр Январь</span>
+                                </a>
+                            </li>
+                            <li class="option">
+                                <a href="february">
+                                    <span class="option-text">2 семестр Февраль</span>
+                                </a>
+                            </li>
+                            <li class="option">
+                                <a href="march">
+                                    <span class="option-text">2 семестр Март</span>
+                                </a>
+                            </li>
+                            <li class="option">
+                                <a href="april">
+                                    <span class="option-text">2 семестр Апрель</span>
+                                </a>
+                            </li>
+                            <li class="option">
+                                <a href="may">
+                                    <span class="option-text">2 семестр Май</span>
+                                </a>
+                            </li>
+                            <li class="option">
+                                <a href="june">
+                                    <span class="option-text">2 семестр Июнь</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="class-spisoc">
+        <table class="table">
+            <thead>
+            <tr>
+                <th class="middle-align-one-lens">Студент</th>
+                <th class="text-center">ИСРПО</th>
+                <th class="text-center">ПОКС</th>
+                <th class="text-center">Англ.яз</th>
+                <th class="text-center">ПОПД</th>
+                <th class="text-center">Психол-я</th>
+                <th class="text-center">Физ-ра</th>
+                <th class="text-center">Числ.методы</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+                <td class="middle-align-one " th:text="${post.get(0).username}"></td>
+                <td class="text-center" th:text="${post.get(0).grade1}"></td>
+                <td class="text-center" th:text="${post.get(0).grade2}"></td>
+                <td class="text-center" th:text="${post.get(0).grade3}"></td>
+                <td class="text-center" th:text="${post.get(0).grade4}"></td>
+                <td class="text-center" th:text="${post.get(0).grade5}"></td>
+                <td class="text-center" th:text="${post.get(0).grade6}"></td>
+                <td class="text-center" th:text="${post.get(0).grade7}"></td>
+            </tr>
+            <tr>
+                <td class="middle-align-one" th:text="${post.get(1).username}"></td>
+                <td class="text-center" th:text="${post.get(1).grade1}"></td>
+                <td class="text-center" th:text="${post.get(1).grade2}"></td>
+                <td class="text-center" th:text="${post.get(1).grade3}"></td>
+                <td class="text-center" th:text="${post.get(1).grade4}"></td>
+                <td class="text-center" th:text="${post.get(1).grade5}"></td>
+                <td class="text-center" th:text="${post.get(1).grade6}"></td>
+                <td class="text-center" th:text="${post.get(1).grade7}"></td>
+            </tr>
+            <tr>
+                <td class="middle-align-one" th:text="${post.get(2).username}"></td>
+                <td class="text-center" th:text="${post.get(2).grade1}"></td>
+                <td class="text-center" th:text="${post.get(2).grade2}"></td>
+                <td class="text-center" th:text="${post.get(2).grade3}"></td>
+                <td class="text-center" th:text="${post.get(2).grade4}"></td>
+                <td class="text-center" th:text="${post.get(2).grade5}"></td>
+                <td class="text-center" th:text="${post.get(2).grade6}"></td>
+                <td class="text-center" th:text="${post.get(2).grade7}"></td>
+            </tr>
+            <tr>
+                <td class="middle-align-one" th:text="${post.get(3).username}"></td>
+                <td class="text-center" th:text="${post.get(3).grade1}"></td>
+                <td class="text-center" th:text="${post.get(3).grade2}"></td>
+                <td class="text-center" th:text="${post.get(3).grade3}"></td>
+                <td class="text-center" th:text="${post.get(3).grade4}"></td>
+                <td class="text-center" th:text="${post.get(3).grade5}"></td>
+                <td class="text-center" th:text="${post.get(3).grade6}"></td>
+                <td class="text-center" th:text="${post.get(3).grade7}"></td>
+            </tr>
+            <tr>
+                <td class="middle-align-one" th:text="${post.get(4).username}"></td>
+                <td class="text-center" th:text="${post.get(4).grade1}"></td>
+                <td class="text-center" th:text="${post.get(4).grade2}"></td>
+                <td class="text-center" th:text="${post.get(4).grade3}"></td>
+                <td class="text-center" th:text="${post.get(4).grade4}"></td>
+                <td class="text-center" th:text="${post.get(4).grade5}"></td>
+                <td class="text-center" th:text="${post.get(4).grade6}"></td>
+                <td class="text-center" th:text="${post.get(4).grade7}"></td>
+            </tr>
+            <tr>
+                <td class="middle-align-one" th:text="${post.get(5).username}"></td>
+                <td class="text-center" th:text="${post.get(5).grade1}"></td>
+                <td class="text-center" th:text="${post.get(5).grade2}"></td>
+                <td class="text-center" th:text="${post.get(5).grade3}"></td>
+                <td class="text-center" th:text="${post.get(5).grade4}"></td>
+                <td class="text-center" th:text="${post.get(5).grade5}"></td>
+                <td class="text-center" th:text="${post.get(5).grade6}"></td>
+                <td class="text-center" th:text="${post.get(5).grade7}"></td>
+            </tr>
+            <tr>
+                <td class="middle-align-one" th:text="${post.get(6).username}"></td>
+                <td class="text-center" th:text="${post.get(6).grade1}"></td>
+                <td class="text-center" th:text="${post.get(6).grade2}"></td>
+                <td class="text-center" th:text="${post.get(6).grade3}"></td>
+                <td class="text-center" th:text="${post.get(6).grade4}"></td>
+                <td class="text-center" th:text="${post.get(6).grade5}"></td>
+                <td class="text-center" th:text="${post.get(6).grade6}"></td>
+                <td class="text-center" th:text="${post.get(6).grade7}"></td>
+            </tr>
+            <tr>
+                <td class="middle-align-one" th:text="${post.get(7).username}"></td>
+                <td class="text-center" th:text="${post.get(7).grade1}"></td>
+                <td class="text-center" th:text="${post.get(7).grade2}"></td>
+                <td class="text-center" th:text="${post.get(7).grade3}"></td>
+                <td class="text-center" th:text="${post.get(7).grade4}"></td>
+                <td class="text-center" th:text="${post.get(7).grade5}"></td>
+                <td class="text-center" th:text="${post.get(7).grade6}"></td>
+                <td class="text-center" th:text="${post.get(7).grade7}"></td>
+            </tr>
+            <tr>
+                <td class="middle-align-one" th:text="${post.get(8).username}"></td>
+                <td class="text-center" th:text="${post.get(8).grade1}"></td>
+                <td class="text-center" th:text="${post.get(8).grade2}"></td>
+                <td class="text-center" th:text="${post.get(8).grade3}"></td>
+                <td class="text-center" th:text="${post.get(8).grade4}"></td>
+                <td class="text-center" th:text="${post.get(8).grade5}"></td>
+                <td class="text-center" th:text="${post.get(8).grade6}"></td>
+                <td class="text-center" th:text="${post.get(8).grade7}"></td>
+            </tr>
+            <tr>
+                <td class="middle-align-one" th:text="${post.get(9).username}"></td>
+                <td class="text-center" th:text="${post.get(9).grade1}"></td>
+                <td class="text-center" th:text="${post.get(9).grade2}"></td>
+                <td class="text-center" th:text="${post.get(9).grade3}"></td>
+                <td class="text-center" th:text="${post.get(9).grade4}"></td>
+                <td class="text-center" th:text="${post.get(9).grade5}"></td>
+                <td class="text-center" th:text="${post.get(9).grade6}"></td>
+                <td class="text-center" th:text="${post.get(9).grade7}"></td>
+            </tr>
+            <tr>
+                <td class="middle-align-one" th:text="${post.get(10).username}"></td>
+                <td class="text-center" th:text="${post.get(10).grade1}"></td>
+                <td class="text-center" th:text="${post.get(10).grade2}"></td>
+                <td class="text-center" th:text="${post.get(10).grade3}"></td>
+                <td class="text-center" th:text="${post.get(10).grade4}"></td>
+                <td class="text-center" th:text="${post.get(10).grade5}"></td>
+                <td class="text-center" th:text="${post.get(10).grade6}"></td>
+                <td class="text-center" th:text="${post.get(10).grade7}"></td>
+            </tr>
+            <tr>
+                <td class="middle-align-one" th:text="${post.get(11).username}"></td>
+                <td class="text-center" th:text="${post.get(11).grade1}"></td>
+                <td class="text-center" th:text="${post.get(11).grade2}"></td>
+                <td class="text-center" th:text="${post.get(11).grade3}"></td>
+                <td class="text-center" th:text="${post.get(11).grade4}"></td>
+                <td class="text-center" th:text="${post.get(11).grade5}"></td>
+                <td class="text-center" th:text="${post.get(11).grade6}"></td>
+                <td class="text-center" th:text="${post.get(11).grade7}"></td>
+            </tr>
+            <tr>
+                <td class="middle-align-one" th:text="${post.get(12).username}"></td>
+                <td class="text-center" th:text="${post.get(12).grade1}"></td>
+                <td class="text-center" th:text="${post.get(12).grade2}"></td>
+                <td class="text-center" th:text="${post.get(12).grade3}"></td>
+                <td class="text-center" th:text="${post.get(12).grade4}"></td>
+                <td class="text-center" th:text="${post.get(12).grade5}"></td>
+                <td class="text-center" th:text="${post.get(12).grade6}"></td>
+                <td class="text-center" th:text="${post.get(12).grade7}"></td>
+            </tr>
+            <tr>
+                <td class="middle-align-one" th:text="${post.get(13).username}"></td>
+                <td class="text-center" th:text="${post.get(13).grade1}"></td>
+                <td class="text-center" th:text="${post.get(13).grade2}"></td>
+                <td class="text-center" th:text="${post.get(13).grade3}"></td>
+                <td class="text-center" th:text="${post.get(13).grade4}"></td>
+                <td class="text-center" th:text="${post.get(13).grade5}"></td>
+                <td class="text-center" th:text="${post.get(13).grade6}"></td>
+                <td class="text-center" th:text="${post.get(13).grade7}"></td>
+            </tr>
+            <tr>
+                <td class="middle-align-one" th:text="${post.get(14).username}"></td>
+                <td class="text-center" th:text="${post.get(14).grade1}"></td>
+                <td class="text-center" th:text="${post.get(14).grade2}"></td>
+                <td class="text-center" th:text="${post.get(14).grade3}"></td>
+                <td class="text-center" th:text="${post.get(14).grade4}"></td>
+                <td class="text-center" th:text="${post.get(14).grade5}"></td>
+                <td class="text-center" th:text="${post.get(14).grade6}"></td>
+                <td class="text-center" th:text="${post.get(14).grade7}"></td>
+            </tr>
+            <tr>
+                <td class="middle-align-one" th:text="${post.get(15).username}"></td>
+                <td class="text-center" th:text="${post.get(15).grade1}"></td>
+                <td class="text-center" th:text="${post.get(15).grade2}"></td>
+                <td class="text-center" th:text="${post.get(15).grade3}"></td>
+                <td class="text-center" th:text="${post.get(15).grade4}"></td>
+                <td class="text-center" th:text="${post.get(15).grade5}"></td>
+                <td class="text-center" th:text="${post.get(15).grade6}"></td>
+                <td class="text-center" th:text="${post.get(15).grade7}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="/js/id.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="/js/id.js"></script>
+<script>
+
+    if (localStorage.getItem('month') !== null) {
+        sBtn_text.innerText = localStorage.getItem('month')
+    }else {
+        localStorage.setItem("month", "1 семестр Сентябрь")
+    }
+</script>
+</body>
+
+</html>

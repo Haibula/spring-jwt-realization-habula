@@ -9,8 +9,12 @@ To run the application enter in the command line: `mvn spring-boot:run`
 After project running, schema in the Database created. First of all, you need some `Roles`:
 
 ```
-INSERT INTO roles(name) VALUES('ROLE_USER');
-INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
+INSERT INTO roles(name) VALUES('ROLE_IS_1_1');
+INSERT INTO roles(name) VALUES('ROLE_IS_1_2');
+INSERT INTO roles(name) VALUES('ROLE_IS_1_3');
+INSERT INTO roles(name) VALUES('ROLE_MODERATOR_IS_1_1');
+INSERT INTO roles(name) VALUES('ROLE_MODERATOR_IS_1_2');
+INSERT INTO roles(name) VALUES('ROLE_MODERATOR_IS_1_3');
 INSERT INTO roles(name) VALUES('ROLE_ADMIN');
 ```
 

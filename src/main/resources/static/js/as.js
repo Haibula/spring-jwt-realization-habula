@@ -23,6 +23,12 @@ switch (localStorage.getItem('month')) {
     case "2 семестр Апрель":
         document.getElementById("nas").href = 'april';
         break;
+    case "2 семестр Май":
+        document.getElementById("nas").href = 'may';
+        break;
+    case "2 семестр Июнь":
+        document.getElementById("nas").href = 'june';
+        break;
 }
 
 
@@ -47,7 +53,7 @@ let list = [
 
 for (let i = 0; i < list.length; i++) {
     for (let j = 0; j < user1.length; j++) {
-        list.at(i).item(j).value = "-"
+        list.at(i).item(0).value = i + 1
         list.at(i).item(j).setAttribute("onFocus", "this.select()")
     }
 }
