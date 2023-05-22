@@ -1,56 +1,291 @@
-*{
+* {
     text-align: center;
     margin: 0;
     padding: 0;
     list-style: none;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
+
 }
-body{
+
+body {
     background-color: #dfdfdf;
 }
-.ren{
+
+.ren {
     display: flex;
     font-size: 15px;
     align-items: flex-start;
-    margin:5px 5px 5px 5px;
-
+    margin: 5px 5px 5px 5px;
+    height: 1950px;
 }
-.nav-bar{
+/*input*/
+.input-group-color {
+    background-color: #24018A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 125px;
+    box-sizing: border-box;
+    font-size: 25px;
+}
+
+.input-group-color::placeholder {
+    font-size: 14px;
+    color: white;
+}
+/*course_1-semester_1*/
+.nav-bar-course_1-semester_1 {
     background-color: #24018A;
     position: absolute;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 2177px;
+    width: 1970px;
     box-sizing: border-box;
-
 }
-.nav-bar .student{
+
+.nav-bar-course_1-semester_1 a {
+    color: #ffffff;
+}
+
+.nav-bar-course_1-semester_1 .logo {
+    display: flex;
+    font-size: 4em;
+    color: white;
+}
+
+.nav-bar-course_1-semester_1 .defender {
+    display: flex;
+}
+
+.nav-bar-course_1-semester_1 .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar-course_1-semester_1 .nav-links ul {
+    display: flex;
+}
+
+.nav-bar-course_1-semester_1 .nav-links ul li {
+    margin: 0 30px;
+    font-size: 20px;
+}
+
+/*course_1-semester_2*/
+.nav-bar-course_1-semester_2 {
+    background-color: #24018A;
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 2135px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.nav-bar-course_1-semester_2 .student {
     display: flex;
     align-items: center;
     margin-left: 20px;
     font-size: 30px;
 }
-.nav-bar a{
+
+.nav-bar-course_1-semester_2 a {
     color: #ffffff;
 }
-.nav-bar .logo{
+
+.nav-bar-course_1-semester_2 .logo {
     display: flex;
     font-size: 4em;
 }
-.nav-bar .defender{
+
+.nav-bar-course_1-semester_2 .defender {
     display: flex;
 }
-.nav-bar .nav-links{
+
+.nav-bar-course_1-semester_2 .nav-links {
     display: flex;
     align-items: center;
 }
-.nav-bar .nav-links ul{
+
+.nav-bar-course_1-semester_2 .nav-links ul {
     display: flex;
 }
-.nav-bar .nav-links ul li {
+
+.nav-bar-course_1-semester_2 .nav-links ul li {
     margin: 0 30px;
     font-size: 20px;
+}
+
+.nav-bar-course_1-semester_2 .student {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+/*course_1-semester_2-special-greade*/
+.nav-bar-course_1-semester_2-special-grade {
+    background-color: #24018A;
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 2300px;
+    box-sizing: border-box;
+    color: white;
+}
+
+.nav-bar-course_1-semester_2-special-grade .student {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.nav-bar-course_1-semester_2-special-grade a {
+    color: #ffffff;
+}
+
+.nav-bar-course_1-semester_2-special-grade .logo {
+    display: flex;
+    font-size: 4em;
+}
+
+.nav-bar-course_1-semester_2-special-grade .defender {
+    display: flex;
+}
+
+.nav-bar-course_1-semester_2-special-grade .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar-course_1-semester_2-special-grade .nav-links ul {
+    display: flex;
+}
+
+.nav-bar-course_1-semester_2-special-grade .nav-links ul li {
+    margin: 0 30px;
+    font-size: 20px;
+}
+
+.nav-bar-course_1-semester_2-special-grade .student {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+/*course_2-semester_2-special-greade*/
+.nav-bar-course_2-semester_2-special-grade {
+    background-color: #24018A;
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 2383px;
+    box-sizing: border-box;
+
+}
+
+.nav-bar-course_2-semester_2-special-grade .student {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.nav-bar-course_2-semester_2-special-grade a {
+    color: #ffffff;
+}
+
+.nav-bar-course_2-semester_2-special-grade .logo {
+    display: flex;
+    font-size: 4em;
+}
+
+.nav-bar-course_2-semester_2-special-grade .defender {
+    display: flex;
+}
+
+.nav-bar-course_2-semester_2-special-grade .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar-course_2-semester_2-special-grade .nav-links ul {
+    display: flex;
+}
+
+.nav-bar-course_2-semester_2-special-grade .nav-links ul li {
+    margin: 0 30px;
+    font-size: 20px;
+}
+
+.nav-bar-course_2-semester_2-special-grade .student {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+/*course_4-semester_2-special-greade*/
+.nav-bar-course_4-semester_2-special-greade {
+    background-color: #24018A;
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 2488px;
+    box-sizing: border-box;
+
+}
+
+.nav-bar-course_4-semester_2-special-greade .student {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.nav-bar-course_4-semester_2-special-greade a {
+    color: #ffffff;
+}
+
+.nav-bar-course_4-semester_2-special-greade .logo {
+    display: flex;
+    font-size: 4em;
+}
+
+.nav-bar-course_4-semester_2-special-greade .defender {
+    display: flex;
+}
+
+.nav-bar-course_4-semester_2-special-greade .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar-course_4-semester_2-special-greade .nav-links ul {
+    display: flex;
+}
+
+.nav-bar-course_4-semester_2-special-greade .nav-links ul li {
+    margin: 0 30px;
+    font-size: 20px;
+}
+
+.nav-bar-course_4-semester_2-special-greade .student {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 30px;
 }

@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/anim-class.css">
+    <link rel="stylesheet" href="/css/bg.css">
+    <link rel="stylesheet" href="/css/likk.css">
+    <link rel="stylesheet" href="/css/table.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/text-input.css">
+    <title>DATA</title>
+</head>
+<body>
+
+<form method="post">
+
+    <div class="ren">
+        <div class="nav-bar-course_1-semester_1">
+            <div class="logo">
+                <ion-icon name="school-outline"></ion-icon>
+                <input type="text" class="input-group-color"
+                       name="inputGroup"
+                       th:value="${groupName.get(0).inputGroup}"
+                       required
+                       placeholder="Название группы"
+                       autocomplete="off"
+                       style="color: white"
+                       minlength="1"></div>
+
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a class="activ-solo" href="">Успеваемость</a>
+                    </li>
+                    <li>
+                        <a class="activ-solo"
+                           href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/progressIS11">Посещаемость</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br/>
+        <div class="main-tron-course_1-semester_1">
+            <div class="col-xs-1-1">
+                <div class="page-title">
+                    <i class="md md-dashboard"></i> Успеваемость
+                </div>
+                <p>
+                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="1 Курс"/>
+                    </a>
+
+                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_2/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="2 Курс"/>
+                    </a>
+
+                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_3/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="3 Курс"/>
+                    </a>
+                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_4/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="4 Курс"/>
+                    </a>
+                    <input class="hidden-xs-control-label-m-t-20" type="submit" value="Cохранить"/>
+                </p>
+            </div>
+            <div class="col-xs-1-2">
+                <div class="form-group-m-t-1">
+                    <label class="hidden-xs col-sm-3 control-label m-t-10">
+                        Семестр
+                    </label>
+                    <div class="col-sm-9 col-xs-12">
+                        <div class="select-menu">
+                            <div class="select-btn">
+                                <span class="sBtn-text">1 семестр Сентябрь</span>
+                                <i class="bx bx-chevron-down"></i>
+                            </div>
+                            <ul class="options">
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/semester_1/september">
+                                        <span class="option-text">1 семестр Сентябрь</span>
+                                    </a>
+
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/semester_1/october">
+                                        <span class="option-text">1 семестр Октябрь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/semester_1/november">
+                                        <span class="option-text">1 семестр Ноябрь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/semester_1/december">
+                                        <span class="option-text">1 семестр Декабрь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/semester_1/special_grade">
+                                        <span class="option-text">1 семестр Экзамены, и.т.д</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/semester_2/january">
+                                        <span class="option-text">2 семестр Январь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/semester_2/february">
+                                        <span class="option-text">2 семестр Февраль</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/semester_2/march">
+                                        <span class="option-text">2 семестр Март</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/semester_2/april">
+                                        <span class="option-text">2 семестр Апрель</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/semester_2/may">
+                                        <span class="option-text">2 семестр Май</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/semester_2/june">
+                                        <span class="option-text">2 семестр Июнь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/semester_2/special_grade">
+                                        <span class="option-text">2 семестр Экзамены, и.т.д</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="class-spisoc">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="middle-align-one-lens">№</th>
+                    <th class="middle-align-one-lens">Студент</th>
+                    <th class="text-center">Диф.зачет Биология</th>
+                    <th class="text-center">Диф.зачет География</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--                    user1-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user1Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user2-->
+                <tr>
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user2Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+
+                    </td>
+                </tr>
+                <!--                    user3-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user3Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user4-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user4Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user5-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user5Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user6-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user6Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user7-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user7Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user8-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user8Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user9-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user9Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user10-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user10Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user11-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user11Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user12-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user12Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user13-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user13Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user14-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user14Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user15-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user15Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user16-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user16Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user17-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user17Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user17Grades"
+                               th:value="${post.get(16).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user17Grades"
+                               th:value="${post.get(16).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user17Grades"
+                               th:value="${post.get(16).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user18-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user18Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user18Grades"
+                               th:value="${post.get(17).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user18Grades"
+                               th:value="${post.get(17).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user18Grades"
+                               th:value="${post.get(17).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user19-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user19Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user19Grades"
+                               th:value="${post.get(18).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user19Grades"
+                               th:value="${post.get(18).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user19Grades"
+                               th:value="${post.get(18).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user20-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user20Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user20Grades"
+                               th:value="${post.get(19).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user20Grades"
+                               th:value="${post.get(19).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user20Grades"
+                               th:value="${post.get(19).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user21-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user21Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user21Grades"
+                               th:value="${post.get(20).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user21Grades"
+                               th:value="${post.get(20).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user21Grades"
+                               th:value="${post.get(20).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user22-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user22Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user22Grades"
+                               th:value="${post.get(21).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user22Grades"
+                               th:value="${post.get(21).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user22Grades"
+                               th:value="${post.get(21).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user23-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user23Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user23Grades"
+                               th:value="${post.get(22).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user23Grades"
+                               th:value="${post.get(22).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user23Grades"
+                               th:value="${post.get(22).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user24-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user24Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user24Grades"
+                               th:value="${post.get(23).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user24Grades"
+                               th:value="${post.get(23).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user24Grades"
+                               th:value="${post.get(23).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user25-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user25Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user25Grades"
+                               th:value="${post.get(24).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user25Grades"
+                               th:value="${post.get(24).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user25Grades"
+                               th:value="${post.get(24).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user26-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user26Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user26Grades"
+                               th:value="${post.get(25).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user26Grades"
+                               th:value="${post.get(25).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user26Grades"
+                               th:value="${post.get(25).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user27-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user27Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user27Grades"
+                               th:value="${post.get(26).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user27Grades"
+                               th:value="${post.get(26).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user27Grades"
+                               th:value="${post.get(26).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user28-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user28Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user28Grades"
+                               th:value="${post.get(27).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user28Grades"
+                               th:value="${post.get(27).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user28Grades"
+                               th:value="${post.get(27).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user29-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user29Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user29Grades"
+                               th:value="${post.get(28).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user29Grades"
+                               th:value="${post.get(28).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user29Grades"
+                               th:value="${post.get(28).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user30-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user30Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user30Grades"
+                               th:value="${post.get(29).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user30Grades"
+                               th:value="${post.get(29).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user30Grades"
+                               th:value="${post.get(29).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user31-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user31Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user31Grades"
+                               th:value="${post.get(30).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user31Grades"
+                               th:value="${post.get(30).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user31Grades"
+                               th:value="${post.get(30).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user32-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user32Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user32Grades"
+                               th:value="${post.get(31).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user32Grades"
+                               th:value="${post.get(31).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user32Grades"
+                               th:value="${post.get(31).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user33-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user33Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user33Grades"
+                               th:value="${post.get(32).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user33Grades"
+                               th:value="${post.get(32).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user33Grades"
+                               th:value="${post.get(32).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user34-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user34Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user34Grades"
+                               th:value="${post.get(33).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user34Grades"
+                               th:value="${post.get(33).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user34Grades"
+                               th:value="${post.get(33).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user35-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user35Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user35Grades"
+                               th:value="${post.get(34).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user35Grades"
+                               th:value="${post.get(34).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user35Grades"
+                               th:value="${post.get(34).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user36-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user36Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user36Grades"
+                               th:value="${post.get(35).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user36Grades"
+                               th:value="${post.get(35).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user36Grades"
+                               th:value="${post.get(35).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user37-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user37Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user37Grades"
+                               th:value="${post.get(36).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user37Grades"
+                               th:value="${post.get(36).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user37Grades"
+                               th:value="${post.get(36).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user38-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user38Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user38Grades"
+                               th:value="${post.get(37).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user38Grades"
+                               th:value="${post.get(37).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user38Grades"
+                               th:value="${post.get(37).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user39-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user39Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user39Grades"
+                               th:value="${post.get(38).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user39Grades"
+                               th:value="${post.get(38).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user39Grades"
+                               th:value="${post.get(38).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                <!--                    user40-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user40Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user40Grades"
+                               th:value="${post.get(39).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user40Grades"
+                               th:value="${post.get(39).getDifOffsetBiology()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user40Grades"
+                               th:value="${post.get(39).getDifOffsetGeography()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer></footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/js/id.js"></script>
+    <script src="/js/as1.js"></script>
+    <script>
+        if (localStorage.getItem('month') !== null) {
+            sBtn_text.innerText = localStorage.getItem('month')
+        } else {
+            localStorage.setItem("month", "1 семестр Сентябрь")
+        }
+    </script>
+</form>
+</body>
+
+</html>

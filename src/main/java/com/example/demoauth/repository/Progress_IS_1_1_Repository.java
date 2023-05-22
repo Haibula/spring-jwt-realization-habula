@@ -1,6 +1,6 @@
 package com.example.demoauth.repository;
 
-import com.example.demoauth.models.Progress_IS_1_1;
+import com.example.demoauth.models.grade_is_1_1.models.Progress_IS_1_1;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -31,7 +31,6 @@ switch (localStorage.getItem('month')) {
         break;
 }
 
-
 let list = [
     user1 = document.getElementsByName("user1Grades"),
     user2 = document.getElementsByName("user2Grades"),

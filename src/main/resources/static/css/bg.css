@@ -1,21 +1,24 @@
-.page-title{
+.page-title {
     display: flex;
     font-size: 30px;
     font-style: italic;
 }
-.col-xs-1-1{
-     /* gap: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; */
+
+.col-xs-1-1 {
+    /* gap: 25px;
+   display: flex;
+   flex-direction: column;
+   align-items: center; */
     gap: 25px;
     display: flex;
     align-items: center;
-} 
-.col-xs-1-2{
+}
+
+.col-xs-1-2 {
     display: flex;
 }
-.reality{
+
+.reality {
     position: absolute;
     padding: 20px;
     display: flex;
@@ -23,21 +26,8 @@
     justify-content: space-between;
     width: 100%;
 }
-.main-tron{
-    background-color: rgb(240, 240, 240);
-    position: absolute;
-    margin-top: 100px;
-    padding: 30px 340px 34px 54px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 2177px;
-    font-size: 20px;
-    box-sizing: border-box;
 
-
-}
-.main-tron-oll{
+.main-tron-oll {
     background-color: rgb(240, 240, 240);
     position: absolute;
     margin-top: 100px;
@@ -50,52 +40,120 @@
     box-sizing: border-box;
 }
 
-    .form-group-m-t-1{
-        font-style: italic;
-        gap: 25px;
+.form-group-m-t-1 {
+    font-style: italic;
+    gap: 25px;
     display: flex;
     align-items: center;
-    }
-    .hidden-xs-control-label-m-t-20{
-        padding: 10px 20px;
-        border-top: 1px solid #2c00b0;
-        border-bottom: 0;
-        border-left: 0;
-        border-right: 0;
-        cursor: pointer;
-        border-radius: 2px;
-        font-style: italic;
-        transition: all 200ms;
-        background-color: white;
-    }
-    .hidden-xs-control-label-m-t-20:hover{
-        color: white;
-        border-top: 1px solid #2c00b0;
-        border-bottom: 0;
-        border-left: 0;
-        border-right: 0;
-        background-color: #2c00b0;
-        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.399);
-    }
-    .hidden-xs-control-label-m-t-20:active,
-    .hidden-xs-control-label-m-t-20:valid{
-        border: 1px solid rgb(93, 93, 255);
-        background-color: rgb(93, 93, 255);
-        border-top: 1px solid rgb(93, 93, 255);
-        border-bottom: 0;
-        border-left: 0;
-        border-right: 0;
-        color: white;
-    }
-    p{
-        justify-content: center;
-        gap: 5px;
-        margin-right: 50px;
-        display: flex;
+}
 
-    }
-    /* .form-group-m-t-1{
-        width: 600px;
-        height: 50px;
-        border: 1px solid rebeccapurple;
-    } */
+.hidden-xs-control-label-m-t-20 {
+    padding: 10px 20px;
+    border-top: 1px solid #2c00b0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    font-style: italic;
+    transition: all 200ms;
+    background-color: white;
+}
+
+.hidden-xs-control-label-m-t-20:hover {
+    color: white;
+    border-top: 1px solid #2c00b0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: #2c00b0;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.399);
+}
+
+.hidden-xs-control-label-m-t-20:active,
+.hidden-xs-control-label-m-t-20:valid {
+    border: 1px solid rgb(93, 93, 255);
+    background-color: rgb(93, 93, 255);
+    border-top: 1px solid rgb(93, 93, 255);
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    color: white;
+}
+
+p {
+    justify-content: center;
+    gap: 5px;
+    margin-right: 50px;
+    display: flex;
+}
+
+/*course_1-semester_1*/
+.main-tron-course_1-semester_1 {
+    background-color: rgb(240, 240, 240);
+    position: absolute;
+    margin-top: 100px;
+    padding: 30px 340px 34px 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1970px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+/*course_1-semester_2*/
+.main-tron-course_1-semester_2 {
+    background-color: rgb(240, 240, 240);
+    position: absolute;
+    margin-top: 100px;
+    padding: 30px 340px 34px 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 2135px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+/*course_1-semester_2-special-greade*/
+.main-tron-course_1-semester_2-special-grade {
+    background-color: rgb(240, 240, 240);
+    position: absolute;
+    margin-top: 100px;
+    padding: 30px 340px 34px 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 2300px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+/*course_1-semester_2-special-greade*/
+.main-tron-course_2-semester_2-special-grade {
+    background-color: rgb(240, 240, 240);
+    position: absolute;
+    margin-top: 100px;
+    padding: 30px 340px 34px 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 2383px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+/*course_4-semester_2-special-greade*/
+.main-tron-course_4-semester_2-special-greade {
+    background-color: rgb(240, 240, 240);
+    position: absolute;
+    margin-top: 100px;
+    padding: 30px 340px 34px 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 2488px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
