@@ -45,6 +45,17 @@
     gap: 25px;
     display: flex;
     align-items: center;
+
+}
+
+.form-group-m-t-1-admin{
+    font-style: italic;
+    gap: 25px;
+    display: flex;
+    align-items: center;
+    width: 600px;
+    color: white;
+
 }
 
 .hidden-xs-control-label-m-t-20 {
@@ -125,7 +136,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 2300px;
+    width: 2397px;
     font-size: 20px;
     box-sizing: border-box;
 }
@@ -139,7 +150,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 2383px;
+    width: 2481px;
     font-size: 20px;
     box-sizing: border-box;
 }
@@ -153,7 +164,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 2488px;
+    width: 2585px;
     font-size: 20px;
     box-sizing: border-box;
 }

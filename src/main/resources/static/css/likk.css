@@ -1,4 +1,4 @@
-.select-menu{
+.select-menu {
     /* border: 1px solid red;  */
     width: 300px;
     margin: -21.5px -5px;
@@ -6,16 +6,18 @@
     position: absolute;
     z-index: 1;
 }
+
 ul {
     list-style-type: none; /* Убирает буллиты */
-   }
-.select-menu .select-btn{
+}
+
+.select-menu .select-btn {
     display: flex;
-    background:rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
     border-top: 1px solid #2c00b0;
-        border-bottom: 0;
-        border-left: 0;
-        border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
     padding: 5px;
     height: 30px;
     padding-left: 15px;
@@ -28,46 +30,54 @@ ul {
     font-size: 16px;
     transition: all 0.3s ease-out;
 }
-.select-btn i{
-    font-size: 20px;  
-    transition: 0.4s;  
+
+.select-btn i {
+    font-size: 20px;
+    transition: 0.4s;
 }
-.select-menu.active .select-btn i{
+
+.select-menu.active .select-btn i {
     transform: rotate(-180deg);
 }
-.select-menu .options{   
+
+.select-menu .options {
     position: relative;;
     padding: 2px;
     /* padding-left: 0px; */
     margin-top: -1px;
-    border-radius: 2px; 
+    border-radius: 2px;
     /* color: #fff; */
-    background:rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
     display: none;
 }
-.select-menu.active .options{
+
+.select-menu.active .options {
     display: block;
 }
-.sBtn-text{
-    background:rgb(255, 255, 255);
+
+.sBtn-text {
+    background: rgb(255, 255, 255);
     color: black;
 }
-.bx-chevron-down{
-    background:rgb(255, 255, 255);
+
+.bx-chevron-down {
+    background: rgb(255, 255, 255);
     color: #2c00b0;
 }
-.options .option .option-text{
+
+.options .option .option-text {
     display: flex;
     height: 30px;
     cursor: pointer;
     padding: 0 16px;
-    border-radius: 1.5px; 
+    border-radius: 1.5px;
     align-items: center;
-    background:rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.532);
     transition: all 0.1s ease-out;
 }
-.options .option .option-text:hover{
-    background:#2c00b0;
+
+.options .option .option-text:hover {
+    background: #2c00b0;
     color: #fff;
 }

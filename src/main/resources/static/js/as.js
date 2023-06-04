@@ -1,58 +1,39 @@
 switch (localStorage.getItem('month')) {
     case "1 семестр Сентябрь":
-        document.getElementById("nas").href = 'september';
+        document.getElementById("nas").href = 'semester_1/september';
         break;
     case "1 семестр Октябрь":
-        document.getElementById("nas").href = 'october';
+        document.getElementById("nas").href = 'semester_1/october';
         break;
     case "1 семестр Ноябрь":
-        document.getElementById("nas").href = 'november';
+        document.getElementById("nas").href = 'semester_1/november';
         break;
     case "1 семестр Декабрь":
-        document.getElementById("nas").href = 'december';
+        document.getElementById("nas").href = 'semester_1/december';
         break;
     case "2 семестр Январь":
-        document.getElementById("nas").href = 'january';
+        document.getElementById("nas").href = 'semester_2/january';
         break;
     case "2 семестр Февраль":
-        document.getElementById("nas").href = 'february';
+        document.getElementById("nas").href = 'semester_2/february';
         break;
     case "2 семестр Март":
-        document.getElementById("nas").href = 'march';
+        document.getElementById("nas").href = 'semester_2/march';
         break;
     case "2 семестр Апрель":
-        document.getElementById("nas").href = 'april';
+        document.getElementById("nas").href = 'semester_2/april';
         break;
     case "2 семестр Май":
-        document.getElementById("nas").href = 'may';
+        document.getElementById("nas").href = 'semester_2/may';
         break;
     case "2 семестр Июнь":
-        document.getElementById("nas").href = 'june';
+        document.getElementById("nas").href = 'semester_2/june';
+        break;
+    case "1 семестр Экзамены, и.т.д":
+        document.getElementById("nas").href = 'semester_1/special_grade';
+        break;
+    case "2 семестр Экзамены, и.т.д":
+        document.getElementById("nas").href = 'semester_2/special_grade';
         break;
 }
-
-let list = [
-    user1 = document.getElementsByName("user1Grades"),
-    user2 = document.getElementsByName("user2Grades"),
-    user3 = document.getElementsByName("user3Grades"),
-    user4 = document.getElementsByName("user4Grades"),
-    user5 = document.getElementsByName("user5Grades"),
-    user6 = document.getElementsByName("user6Grades"),
-    user7 = document.getElementsByName("user7Grades"),
-    user8 = document.getElementsByName("user8Grades"),
-    user9 = document.getElementsByName("user9Grades"),
-    user10 = document.getElementsByName("user10Grades"),
-    user11 = document.getElementsByName("user11Grades"),
-    user12 = document.getElementsByName("user12Grades"),
-    user13 = document.getElementsByName("user13Grades"),
-    user14 = document.getElementsByName("user14Grades"),
-    user15 = document.getElementsByName("user15Grades"),
-    user16 = document.getElementsByName("user16Grades"),
-];
-
-for (let i = 0; i < list.length; i++) {
-    for (let j = 0; j < user1.length; j++) {
-        list.at(i).item(0).value = i + 1
-        list.at(i).item(j).setAttribute("onFocus", "this.select()")
-    }
-}
+// придумай что делать с 2 курсом

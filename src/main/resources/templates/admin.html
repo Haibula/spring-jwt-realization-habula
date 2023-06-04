@@ -58,17 +58,49 @@ getResult();
 return false;
 "
 >
-
     <div class="ren">
         <div class="nav-bar-course_1-semester_1">
-            <div class="logo"><a href="#" class="defender">
+            <div class="logo">
                 <ion-icon name="school-outline"></ion-icon>
-                <a href="#"
-                   class="student">[ADMIN]</a></a></div>
-            <div class="nav-links">
+                <h8>ADMIN</h8>
+            </div>
 
+            <div class="form-group-m-t-1-admin">
+                <h1>Группы</h1>
+                <div class="col-sm-9 col-xs-12">
+                    <div class="select-menu">
+                        <div class="select-btn">
+                            <span class="sBtn-text">IS 1</span>
+                            <i class="bx bx-chevron-down"></i>
+                        </div>
+                        <ul class="options">
+                            <li class="option">
+                                <a href ="http://localhost:8080/api/students/is_1_1/course_1/semester_1/september" target="_blank">
+                                    <span class="option-text">IS 1</span>
+                                </a>
+
+                            </li>
+                            <li class="option">
+                                <a href="">
+                                    <span class="option-text">IS 2</span>
+                                </a>
+                            </li>
+                            <li class="option">
+                                <a href="">
+                                    <span class="option-text">IS 3</span>
+                                </a>
+                            </li>
+                            <li class="option">
+                                <a href="">
+                                    <span class="option-text">IS 4</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+
         <div class="wrapper">
             <div class="title">
                 <img src="/css/gerb_madi.jpg">
@@ -85,15 +117,15 @@ return false;
                 </div>
                 <div class="input_field">
                     <!-- <label>Отчество</label> -->
-                    <input type="text" class="input" name="groups" placeholder="Группа(41ks..и.т.д)">
+                    <input type="text" class="input" name="groups" placeholder="Группа(is..и.т.д)">
                 </div>
                 <div class="group-column">
                     <div class="input_field">
                         <div class="custom_select">
                             <select>
-                                <option value="group-one">группа 41ks</option>
-                                <option value="group-two">группа 42ks</option>
-                                <option value="group-three">группа 43ks</option>
+                                <option value="group-one">группа is1</option>
+                                <option value="group-two">группа is2</option>
+                                <option value="group-three">группа is3</option>
                                 <option value="group-three">группа moderator</option>
                             </select>
                         </div>
@@ -107,7 +139,14 @@ return false;
         </div>
     </div>
 </form>
-
+<script src="/js/id.js"></script>
+<script>
+    if (localStorage.getItem('month') !== null) {
+        sBtn_text.innerText = localStorage.getItem('month')
+    } else {
+        localStorage.setItem("month", "1 семестр Сентябрь")
+    }
+</script>
 </body>
 
 </html>

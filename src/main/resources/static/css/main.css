@@ -136,7 +136,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 2300px;
+    width: 2397px;
     box-sizing: border-box;
     color: white;
 }
@@ -190,9 +190,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 2383px;
+    width: 2481px;
     box-sizing: border-box;
-
+    color: white;
 }
 
 .nav-bar-course_2-semester_2-special-grade .student {
@@ -244,8 +244,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 2488px;
+    width: 2585px;
     box-sizing: border-box;
+    color: white;
 
 }
 

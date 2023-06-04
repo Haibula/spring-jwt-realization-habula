@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:font-size="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap"
+            rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link rel="stylesheet" href="/css/anim-class.css">
+
+    <link rel="stylesheet" href="/css/bg.css">
+
+    <link rel="stylesheet" href="/css/likk.css">
+
+    <link rel="stylesheet" href="/css/table.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/text-input.css">
+
+    <title>DATA</title>
+</head>
+<body>
+
+<form method="post">
+    <div class="ren">
+        <div class="nav-bar-course_1-semester_1">
+            <div class="logo">
+                <ion-icon name="school-outline"></ion-icon>
+                <h8 th:text="${groupName.get(0).inputGroup}"></h8>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a class="activ-solo" href=""> Успеваемость</a>
+                    </li>
+                    <li>
+                        <a class="activ-solo"
+                           href="http://localhost:8080/api/students/is_1_1/course_1/progressIS11">
+                            Посещаемость</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br/>
+        <div class="main-tron-course_1-semester_1">
+            <div class="col-xs-1-1">
+                <div class="page-title">
+                    <i class="md md-dashboard"> </i> Успеваемость
+                </div>
+                <p>
+                    <a href="http://localhost:8080/api/students/is_1_1/course_1/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="1 Курс"/>
+                    </a>
+
+                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="2 Курс"/>
+                    </a>
+
+                    <a href="http://localhost:8080/api/students/is_1_1/course_3/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="3 Курс"/>
+                    </a>
+                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="4 Курс"/>
+                    </a>
+                    
+                </p>
+            </div>
+            <div class="col-xs-1-2">
+                <div class="form-group-m-t-1">
+                    <label class="hidden-xs col-sm-3 control-label m-t-10">
+                        Семестр
+                    </label>
+                    <div class="col-sm-9 col-xs-12">
+                        <div class="select-menu">
+                            <div class="select-btn">
+                                <span class="sBtn-text"> 1 семестр Сентябрь</span>
+                                <i class="bx bx-chevron-down"></i>
+                            </div>
+                            <ul class="options">
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_1/september">
+                                        <span class="option-text"> 1 семестр Сентябрь</span>
+                                    </a>
+
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_1/october">
+                                        <span class="option-text"> 1 семестр Октябрь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_1/november">
+                                        <span class="option-text"> 1 семестр Ноябрь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_1/december">
+                                        <span class="option-text"> 1 семестр Декабрь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_1/special_grade">
+                                        <span class="option-text"> 1 семестр Экзамены, и.т.д</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_2/january">
+                                        <span class="option-text"> 2 семестр Январь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_2/february">
+                                        <span class="option-text"> 2 семестр Февраль</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_2/march">
+                                        <span class="option-text"> 2 семестр Март</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_2/april">
+                                        <span class="option-text"> 2 семестр Апрель</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_2/may">
+                                        <span class="option-text"> 2 семестр Май</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_2/june">
+                                        <span class="option-text"> 2 семестр Июнь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_2/special_grade">
+                                        <span class="option-text"> 2 семестр Экзамены, и.т.д</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="class-spisoc">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="middle-align-one-lens">№</th>
+                    <th class="middle-align-one-lens">Студент</th>
+                    <th class="text-center">Англ.язык</th>
+                    <th class="text-center">Физкультура</th>
+                    <th class="text-center">Теория вероятностей</th>
+                    <th class="text-center">Архитектура аппаратных средств</th>
+                    <th class="text-center">Информационные технологии</th>
+                    <th class="text-center">Основы алгоритмизации и программирования</th>
+                    <th class="text-center">Основы проектирования баз дынных</th>
+                    <th class="text-center">Внедрение и поддержка компьютерных систем</th>
+                    <th class="text-center">Обеспечение и качества функционирования компьютерных систем</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--                    user1-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(0).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user2-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(1).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user3-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(2).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user4-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(3).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user5-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(4).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user6-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(5).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user7-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(6).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user8-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(7).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user9-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(8).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user10-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(9).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user11-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(10).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user12-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(11).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user13-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(12).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user14-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(13).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user15-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(14).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user16-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(15).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user17-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(16).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user18-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(17).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user19-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(18).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user20-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(19).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user21-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(20).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user22-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(21).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user23-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(22).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user24-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(23).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user25-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(24).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user26-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(25).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user27-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(26).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user28-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(27).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user29-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(28).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user30-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(29).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGradeImplementationAndSupportOfComputerSystems()}"></td><td class="text-center" th:text="${post.get(29).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td></tr><!--                    user31--><tr><td class="middle-align-one" th:text="${post.get(30).getUserID()}"></td><td class="text-center" th:text="${post.get(30).getUsername()}"></td><td class="text-center" th:text="${post.get(30).getGradeEnglishLanguage()}"></td><td class="text-center" th:text="${post.get(30).getGradePhysicalTraining()}"></td><td class="text-center" th:text="${post.get(30).getGradeProbabilityTheory()}"></td><td class="text-center" th:text="${post.get(30).getGradeHardwareArchitecture()}"></td><td class="text-center" th:text="${post.get(30).getGradeInformationTechnology()}"></td><td class="text-center" th:text="${post.get(30).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td><td class="text-center" th:text="${post.get(30).getGradeDatabaseDesignFundamentals()}"></td><td class="text-center" th:text="${post.get(30).getGradeImplementationAndSupportOfComputerSystems()}"></td><td class="text-center" th:text="${post.get(30).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user32-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(31).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user33-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(32).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user34-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(33).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user35-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(34).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user36-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(35).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user37-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(36).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user38-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(37).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user39-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(38).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                <!--                    user40-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(39).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradeProbabilityTheory()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradeHardwareArchitecture()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradeInformationTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradeDatabaseDesignFundamentals()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradeImplementationAndSupportOfComputerSystems()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradeEnsuringAndQualityOfFunctioningOfComputerSystems()}"></td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/js/id.js"></script>
+    <script>
+        if (localStorage.getItem('month') !== null) {
+            sBtn_text.innerText = localStorage.getItem('month')
+        } else {
+            localStorage.setItem("month", "1 семестр Сентябрь")
+        }
+    </script>
+</form>
+</body>
+
+</html>

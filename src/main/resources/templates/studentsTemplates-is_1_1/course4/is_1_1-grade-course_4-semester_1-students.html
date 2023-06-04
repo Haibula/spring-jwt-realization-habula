@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/anim-class.css">
+    <link rel="stylesheet" href="/css/bg.css">
+    <link rel="stylesheet" href="/css/likk.css">
+    <link rel="stylesheet" href="/css/table.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/text-input.css">
+    <title>DATA</title>
+</head>
+<body>
+
+<form method="post">
+
+    <div class="ren">
+        <div class="nav-bar-course_1-semester_1">
+            <div class="logo">
+                <ion-icon name="school-outline"></ion-icon>
+                <h8 th:text="${groupName.get(0).inputGroup}"></h8>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a class="activ-solo" href="">Успеваемость</a>
+                    </li>
+                    <li>
+                        <a class="activ-solo"
+                           href="http://localhost:8080/api/students/is_1_1/course_1/progressIS11">
+                            Посещаемость</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br/>
+        <div class="main-tron-course_1-semester_1">
+            <div class="col-xs-1-1">
+                <div class="page-title">
+                    <i class="md md-dashboard"></i> Успеваемость
+                </div>
+                <p>
+                    <a href="http://localhost:8080/api/students/is_1_1/course_1/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="1 Курс"/>
+                    </a>
+
+                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="2 Курс"/>
+                    </a>
+
+                    <a href="http://localhost:8080/api/students/is_1_1/course_3/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="3 Курс"/>
+                    </a>
+                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="4 Курс"/>
+                    </a>
+                    
+                </p>
+            </div>
+            <div class="col-xs-1-2">
+                <div class="form-group-m-t-1">
+                    <label class="hidden-xs col-sm-3 control-label m-t-10">
+                        Семестр
+                    </label>
+                    <div class="col-sm-9 col-xs-12">
+                        <div class="select-menu">
+                            <div class="select-btn">
+                                <span class="sBtn-text">1 семестр Сентябрь</span>
+                                <i class="bx bx-chevron-down"></i>
+                            </div>
+                            <ul class="options">
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/september">
+                                        <span class="option-text">1 семестр Сентябрь</span>
+                                    </a>
+
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/october">
+                                        <span class="option-text">1 семестр Октябрь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/november">
+                                        <span class="option-text">1 семестр Ноябрь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/december">
+                                        <span class="option-text">1 семестр Декабрь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/special_grade">
+                                        <span class="option-text">1 семестр Экзамены, и.т.д</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_2/january">
+                                        <span class="option-text">2 семестр Январь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_2/february">
+                                        <span class="option-text">2 семестр Февраль</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_2/march">
+                                        <span class="option-text">2 семестр Март</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_2/april">
+                                        <span class="option-text">2 семестр Апрель</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_2/special_grade">
+                                        <span class="option-text">2 семестр Экзамены, и.т.д</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="class-spisoc">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="middle-align-one-lens">№</th>
+                    <th class="middle-align-one-lens">Студент</th>
+                    <th class="text-center">Англ.язык</th>
+                    <th class="text-center">Физкультура</th>
+                    <th class="text-center">Разработка программных модулей</th>
+                    <th class="text-center">Разработка мобильных приложений</th>
+                    <th class="text-center">Системное программирование</th>
+                    <th class="text-center">Технология разработки программного обеспечения</th>
+                    <th class="text-center">ИСРПО</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--                    user1-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(0).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user2-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(1).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user3-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(2).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user4-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(3).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user5-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(4).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user6-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(5).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user7-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(6).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user8-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(7).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user9-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(8).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user10-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(9).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user11-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(10).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user12-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(11).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user13-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(12).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user14-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(13).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user15-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(14).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user16-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(15).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user17-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(16).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user18-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(17).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user19-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(18).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user20-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(19).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user21-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(20).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user22-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(21).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user23-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(22).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user24-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(23).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user25-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(24).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user26-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(25).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user27-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(26).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user28-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(27).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user29-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(28).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user30-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(29).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user31-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(30).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user32-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(31).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user33-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(32).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user34-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(33).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user35-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(34).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user36-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(35).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user37-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(36).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user38-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(37).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user39-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(38).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGradeISRPO()}"></td>
+
+                </tr>
+                <!--                    user40-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(39).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradeEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradePhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradeDevelopmentSoftwareModules()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradeMobileApplicationDevelopment()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradeSystemProgramming()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradeSoftwareDevelopmentTechnology()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGradeISRPO()}"></td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer></footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/js/id.js"></script>
+    <script>
+        if (localStorage.getItem('month') !== null) {
+            sBtn_text.innerText = localStorage.getItem('month')
+        } else {
+            localStorage.setItem("month", "1 семестр Сентябрь")
+        }
+    </script>
+</form>
+</body>
+
+</html>

@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap"
+            rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/anim-class.css">
+    <link rel="stylesheet" href="/css/bg.css">
+    <link rel="stylesheet" href="/css/likk.css">
+    <link rel="stylesheet" href="/css/table.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/text-input.css">
+    <title>DATA</title>
+</head>
+<body>
+
+<form method="post">
+
+    <div class="ren">
+        <div class="nav-bar-course_4-semester_2-special-greade">
+            <div class="logo">
+                <ion-icon name="school-outline"></ion-icon>
+                <h8 th:text="${groupName.get(0).inputGroup}"></h8>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a class="activ-solo" href="">Успеваемость</a>
+                    </li>
+                    <li>
+                        <a class="activ-solo"
+                           href="http://localhost:8080/api/students/is_1_1/course_1/progressIS11">
+                            Посещаемость</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br/>
+        <div class="main-tron-course_4-semester_2-special-greade">
+            <div class="col-xs-1-1">
+                <div class="page-title">
+                    <i class="md md-dashboard"></i> Успеваемость
+                </div>
+                <p>
+                    <a href="http://localhost:8080/api/students/is_1_1/course_1/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="1 Курс"/>
+                    </a>
+
+                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="2 Курс"/>
+                    </a>
+
+                    <a href="http://localhost:8080/api/students/is_1_1/course_3/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="3 Курс"/>
+                    </a>
+                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/september">
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="4 Курс"/>
+                    </a>
+                    
+                </p>
+            </div>
+            <div class="col-xs-1-2">
+                <div class="form-group-m-t-1">
+                    <label class="hidden-xs col-sm-3 control-label m-t-10">
+                        Семестр
+                    </label>
+                    <div class="col-sm-9 col-xs-12">
+                        <div class="select-menu">
+                            <div class="select-btn">
+                                <span class="sBtn-text">1 семестр Сентябрь</span>
+                                <i class="bx bx-chevron-down"></i>
+                            </div>
+                            <ul class="options">
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/september">
+                                        <span class="option-text">1 семестр Сентябрь</span>
+                                    </a>
+
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/october">
+                                        <span class="option-text">1 семестр Октябрь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/november">
+                                        <span class="option-text">1 семестр Ноябрь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/december">
+                                        <span class="option-text">1 семестр Декабрь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/special_grade">
+                                        <span class="option-text">1 семестр Экзамены, и.т.д</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_2/january">
+                                        <span class="option-text">2 семестр Январь</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_2/february">
+                                        <span class="option-text">2 семестр Февраль</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_2/march">
+                                        <span class="option-text">2 семестр Март</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_2/april">
+                                        <span class="option-text">2 семестр Апрель</span>
+                                    </a>
+                                </li>
+                                <li class="option">
+                                    <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_2/special_grade">
+                                        <span class="option-text">2 семестр Экзамены, и.т.д</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="class-spisoc">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="middle-align-one-lens">№</th>
+                    <th class="middle-align-one-lens">Студент</th>
+                    <th class="text-center">Диф.зачет Основы философии</th>
+                    <th class="text-center">Диф.зачет Англ.язык</th>
+                    <th class="text-center">Диф.зачет Физкультура</th>
+                    <th class="text-center">Диф.зачет Правовое обеспечение проф.деятельности</th>
+                    <th class="text-center">Диф.зачет Численные методы</th>
+                    <th class="text-center">Диф.зачет Менеджмент в проф.деятельности</th>
+                    <th class="text-center">Диф.зачет ИСРПО</th>
+                    <th class="text-center">Экзамен Мат.модели</th>
+                    <th class="text-center">Квалиф.экзамен</th>
+                    <th class="text-center">Производственная практика</th>
+                    <th class="text-center">Преддипломная практика</th>
+                    <th class="text-center">Защита дипломного проекта</th>
+                    <th class="text-center">Демо.экзамен</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--                    user1-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(0).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(0).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user2-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(1).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(1).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user3-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(2).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(2).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user4-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(3).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(3).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user5-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(4).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(4).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user6-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(5).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(5).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user7-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(6).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(6).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user8-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(7).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(7).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user9-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(8).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(8).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user10-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(9).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(9).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user11-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(10).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(10).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user12-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(11).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(11).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user13-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(12).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(12).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user14-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(13).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(13).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user15-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(14).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(14).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user16-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(15).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(15).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user17-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(16).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(16).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user18-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(17).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(17).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user19-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(18).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(18).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user20-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(19).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(19).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user21-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(20).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(20).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user22-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(21).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(21).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user23-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(22).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(22).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user24-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(23).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(23).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user25-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(24).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(24).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user26-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(25).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(25).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user27-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(26).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(26).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user28-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(27).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(27).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user29-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(28).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(28).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user30-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(29).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(29).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user31-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(30).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(30).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user32-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(31).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(31).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user33-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(32).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(32).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user34-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(33).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(33).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user35-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(34).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(34).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user36-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(35).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(35).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user37-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(36).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(36).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user38-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(37).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(37).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user39-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(38).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(38).getDemoExam()}"></td>
+
+                </tr>
+                <!--                    user40-->
+                <tr>
+                    <td class="middle-align-one" th:text="${post.get(39).getUserID()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getUsername()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getDifOffsetFundamentalsPhilosophy()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getDifOffsetEnglishLanguage()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getDifOffsetPhysicalTraining()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getDifOffsetLegalSupportProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getDifOffsetNumericalMethods()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getDifOffsetManagementProfessionalActivity()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getDifOffsetISRPO()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getExamMathematicalModels()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getQualificationExam()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getProductionPractice()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getUndergraduatePractice()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getGraduationProjectDefense()}"></td>
+                    <td class="text-center" th:text="${post.get(39).getDemoExam()}"></td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer></footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/js/id.js"></script>
+    <script>
+        if (localStorage.getItem('month') !== null) {
+            sBtn_text.innerText = localStorage.getItem('month')
+        } else {
+            localStorage.setItem("month", "1 семестр Сентябрь")
+        }
+    </script>
+</form>
+</body>
+
+</html>

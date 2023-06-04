@@ -2,7 +2,7 @@ package com.example.demoauth.controllers.authController;
 
 import com.example.demoauth.pojo.LoginRequest;
 import com.example.demoauth.pojo.SignupRequest;
-import com.example.demoauth.service.AuthControllerService;
+import com.example.demoauth.service.userService.AuthControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -18,7 +18,7 @@ public class AuthController {
 
     @GetMapping("signin")
     String getLogin(){
-        return "index";
+        return "authorization";
     }
 
 

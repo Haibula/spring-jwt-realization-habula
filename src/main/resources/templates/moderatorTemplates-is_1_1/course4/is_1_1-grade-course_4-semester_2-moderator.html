@@ -25,10 +25,16 @@
 
     <div class="ren">
         <div class="nav-bar-course_1-semester_1">
-            <div class="logo"><a href="#" class="defender">
+            <div class="logo">
                 <ion-icon name="school-outline"></ion-icon>
-                <a href="#"
-                   class="student">[41KS]</a></a></div>
+                <input type="text" class="input-group-color"
+                       name="inputGroup"
+                       th:value="${groupName.get(0).inputGroup}"
+                       required
+                       placeholder="Название группы"
+                       autocomplete="off"
+                       style="color: white"
+                       minlength="1"></div>
 
             <div class="nav-links">
                 <ul>
@@ -36,7 +42,9 @@
                         <a class="activ-solo" href="">Успеваемость</a>
                     </li>
                     <li>
-                        <a class="activ-solo" href="progressIS11">Посещаемость</a>
+                        <a class="activ-solo"
+                           href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/progressIS11">Посещаемость</a>
+
                     </li>
                 </ul>
             </div>
@@ -124,16 +132,6 @@
                                     </a>
                                 </li>
                                 <li class="option">
-                                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_4/semester_2/may">
-                                        <span class="option-text">2 семестр Май</span>
-                                    </a>
-                                </li>
-                                <li class="option">
-                                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_4/semester_2/june">
-                                        <span class="option-text">2 семестр Июнь</span>
-                                    </a>
-                                </li>
-                                <li class="option">
                                     <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_4/semester_2/special_grade">
                                         <span class="option-text">2 семестр Экзамены, и.т.д</span>
                                     </a>
@@ -148,6 +146,7 @@
             <table class="table">
                 <thead>
                 <tr>
+                    <th class="middle-align-one-lens">№</th>
                     <th class="middle-align-one-lens">Студент</th>
                     <th class="text-center">Основы философии</th>
                     <th class="text-center">Англ.язык</th>
@@ -162,818 +161,2908 @@
                 <!--                    user1-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" id="user1Grades"
-                               name="user1Grades"
-                               placeholder="Инициалы" minlength="1">
+                        <input type="text" class="text-input-user" readonly name="user1Grades"
+                               placeholder="ид"
+                               minlength="1">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user1Grades"
-                               placeholder="Оцен"
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getUsername()}"
+                               placeholder="Инициалы"
                                minlength="1"
-                               maxlength="3" size="3">
-                    </td>
-
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user1Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user1Grades"
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user1Grades"
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getGradeEnglishLanguage()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user1Grades"
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getGradePhysicalTraining()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user1Grades"
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getGradeLegalSupportProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user1Grades"
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getGradeNumericalMethods()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
-
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user1Grades"
+                               th:value="${post.get(0).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
 
                 </tr>
                 <!--                    user2-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" name="user2Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user2Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user2Grades"
-                               placeholder="Оцен"
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getUsername()}"
+                               placeholder="Инициалы"
                                minlength="1"
-                               maxlength="3" size="2">
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user2Grades"
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user2Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user2Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
                     </td>
 
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user2Grades"
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getGradeEnglishLanguage()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user2Grades"
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getGradeLegalSupportProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user2Grades"
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getGradeNumericalMethods()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user2Grades"
+                               th:value="${post.get(1).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
                 </tr>
                 <!--                    user3-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" name="user3Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user3Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user3Grades"
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user3Grades"
+                               th:value="${post.get(2).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
 
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user3Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user3Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user3Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user3Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user3Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user3Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
+
                 </tr>
                 <!--                    user4-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" name="user4Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user4Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user4Grades"
+                               th:value="${post.get(3).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
 
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user4Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user4Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user4Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user4Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user4Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user4Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user4Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
                 </tr>
                 <!--                    user5-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" name="user5Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user5Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user5Grades"
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
                     </td>
 
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user5Grades"
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getGradeEnglishLanguage()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user5Grades"
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getGradeLegalSupportProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user5Grades"
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getGradeNumericalMethods()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user5Grades"
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getGradeManagementProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user5Grades"
+                        <input type="text" class="text-input-grade-user" name="user5Grades"
+                               th:value="${post.get(4).getGradeMathematicalModels()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user5Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
+
                 </tr>
                 <!--                    user6-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" name="user6Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user6Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user6Grades"
-                               placeholder="Оцен"
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getUsername()}"
+                               placeholder="Инициалы"
                                minlength="1"
-                               maxlength="3" size="2">
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user6Grades"
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user6Grades"
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getGradeEnglishLanguage()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
 
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user6Grades"
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getGradePhysicalTraining()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user6Grades"
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getGradeLegalSupportProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user6Grades"
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getGradeNumericalMethods()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user6Grades"
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getGradeManagementProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user6Grades"
+                               th:value="${post.get(5).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
 
                 </tr>
                 <!--                    user7-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" name="user7Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user7Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user7Grades"
-                               placeholder="Оцен"
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getUsername()}"
+                               placeholder="Инициалы"
                                minlength="1"
-                               maxlength="3" size="2">
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user7Grades"
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user7Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
                     </td>
 
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user7Grades"
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getGradeEnglishLanguage()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user7Grades"
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getGradeLegalSupportProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user7Grades"
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getGradeNumericalMethods()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user7Grades"
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getGradeManagementProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user7Grades"
+                               th:value="${post.get(6).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
                 </tr>
                 <!--                    user8-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" name="user8Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user8Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user8Grades"
-                               placeholder="Оцен"
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getUsername()}"
+                               placeholder="Инициалы"
                                minlength="1"
-                               maxlength="3" size="2">
+                               size="3" autocomplete="off">
+
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user8Grades"
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user8Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user8Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
                     </td>
 
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user8Grades"
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getGradeEnglishLanguage()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user8Grades"
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getGradeLegalSupportProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user8Grades"
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getGradeNumericalMethods()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user8Grades"
+                               th:value="${post.get(7).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
                 </tr>
                 <!--                    user9-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" name="user9Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user9Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user9Grades"
-                               placeholder="Оцен"
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getUsername()}"
+                               placeholder="Инициалы"
                                minlength="1"
-                               maxlength="3" size="2">
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user9Grades"
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user9Grades"
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getGradeLegalSupportProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user9Grades"
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getGradeNumericalMethods()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user9Grades"
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getGradeManagementProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user9Grades"
+                        <input type="text" class="text-input-grade-user" name="user9Grades"
+                               th:value="${post.get(8).getGradeMathematicalModels()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user9Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
+
                 </tr>
                 <!--                    user10-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" name="user10Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user10Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user10Grades"
-                               placeholder="Оцен"
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getUsername()}"
+                               placeholder="Инициалы"
                                minlength="1"
-                               maxlength="3" size="2">
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user10Grades"
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user10Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user10Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
                     </td>
 
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user10Grades"
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getGradeEnglishLanguage()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user10Grades"
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getGradeLegalSupportProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user10Grades"
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getGradeNumericalMethods()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user10Grades"
+                               th:value="${post.get(9).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
                 </tr>
                 <!--                    user11-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" name="user11Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user11Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user11Grades"
-                               placeholder="Оцен"
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getUsername()}"
+                               placeholder="Инициалы"
                                minlength="1"
-                               maxlength="3" size="2">
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user11Grades"
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user11Grades"
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getGradeEnglishLanguage()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user11Grades"
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getGradePhysicalTraining()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user11Grades"
+                               th:value="${post.get(10).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
 
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user11Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user11Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user11Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
                 </tr>
                 <!--                    user12-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" name="user12Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user12Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user12Grades"
-                               placeholder="Оцен"
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getUsername()}"
+                               placeholder="Инициалы"
                                minlength="1"
-                               maxlength="3" size="2">
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user12Grades"
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user12Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user12Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
                     </td>
 
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user12Grades"
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getGradeEnglishLanguage()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user12Grades"
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getGradeLegalSupportProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user12Grades"
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getGradeNumericalMethods()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user12Grades"
+                               th:value="${post.get(11).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
                 </tr>
                 <!--                    user13-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" name="user13Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user13Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
+
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user13Grades"
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
                     </td>
+
+
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user13Grades"
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getGradeEnglishLanguage()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
+
+
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user13Grades"
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getGradePhysicalTraining()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
+
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user13Grades"
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getGradeLegalSupportProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
+
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user13Grades"
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getGradeNumericalMethods()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user13Grades"
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getGradeManagementProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user13Grades"
+                        <input type="text" class="text-input-grade-user" name="user13Grades"
+                               th:value="${post.get(12).getGradeMathematicalModels()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
+
                 </tr>
                 <!--                    user14-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" name="user14Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user14Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user14Grades"
-                               placeholder="Оцен"
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getUsername()}"
+                               placeholder="Инициалы"
                                minlength="1"
-                               maxlength="3" size="2">
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user14Grades"
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user14Grades"
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getGradeEnglishLanguage()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user14Grades"
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getGradePhysicalTraining()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user14Grades"
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getGradeLegalSupportProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user14Grades"
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getGradeNumericalMethods()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user14Grades"
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getGradeManagementProfessionalActivity()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user14Grades"
+                               th:value="${post.get(13).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
                 </tr>
                 <!--                    user15-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" name="user15Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user15Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user15Grades"
-                               placeholder="Оцен"
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getUsername()}"
+                               placeholder="Инициалы"
                                minlength="1"
-                               maxlength="3" size="2">
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user15Grades"
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user15Grades"
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getGradeEnglishLanguage()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user15Grades"
+                               th:value="${post.get(14).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
 
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user15Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user15Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user15Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user15Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
-                    </td>
                 </tr>
                 <!--                    user16-->
                 <tr>
                     <td class="middle-align-one">
-                        <input type="text" class="text-input-grade-user" required="required" name="user16Grades"
-                               placeholder="Инициалы"
+                        <input type="text" class="text-input-user" readonly name="user16Grades"
+                               placeholder="ид"
                                minlength="1">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user16Grades"
-                               placeholder="Оцен"
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getUsername()}"
+                               placeholder="Инициалы"
                                minlength="1"
-                               maxlength="3" size="2">
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user16Grades"
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user16Grades"
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getGradeEnglishLanguage()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user16Grades"
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getGradePhysicalTraining()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user16Grades"
+                               th:value="${post.get(15).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
                     </td>
 
-                    <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user16Grades"
-                               placeholder="Оцен"
-                               minlength="1"
-                               maxlength="3" size="2">
+                </tr>
+                <!--                    user17-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user17Grades"
+                               placeholder="ид"
+                               minlength="1">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user16Grades"
-                               placeholder="Оцен"
+                        <input type="text" class="text-input-grade-user" name="user17Grades"
+                               th:value="${post.get(16).getUsername()}"
+                               placeholder="Инициалы"
                                minlength="1"
-                               maxlength="3" size="2">
+                               size="3" autocomplete="off">
                     </td>
                     <td class="text-center">
-                        <input type="text" class="text-input-grade-user" required="required" name="user16Grades"
+                        <input type="text" class="text-input-grade-user" name="user17Grades"
+                               th:value="${post.get(16).getGradeFundamentalsPhilosophy()}"
                                placeholder="Оцен"
                                minlength="1"
-                               maxlength="3" size="2">
+                               maxlength="3"
+                               size="3" autocomplete="off">
                     </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user17Grades"
+                               th:value="${post.get(16).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user17Grades"
+                               th:value="${post.get(16).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user17Grades"
+                               th:value="${post.get(16).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user17Grades"
+                               th:value="${post.get(16).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user17Grades"
+                               th:value="${post.get(16).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user17Grades"
+                               th:value="${post.get(16).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user18-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user18Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user18Grades"
+                               th:value="${post.get(17).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user18Grades"
+                               th:value="${post.get(17).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user18Grades"
+                               th:value="${post.get(17).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user18Grades"
+                               th:value="${post.get(17).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user18Grades"
+                               th:value="${post.get(17).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user18Grades"
+                               th:value="${post.get(17).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user18Grades"
+                               th:value="${post.get(17).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user18Grades"
+                               th:value="${post.get(17).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user19-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user19Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user19Grades"
+                               th:value="${post.get(18).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user19Grades"
+                               th:value="${post.get(18).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user19Grades"
+                               th:value="${post.get(18).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user19Grades"
+                               th:value="${post.get(18).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user19Grades"
+                               th:value="${post.get(18).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user19Grades"
+                               th:value="${post.get(18).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user19Grades"
+                               th:value="${post.get(18).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user19Grades"
+                               th:value="${post.get(18).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user20-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user20Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user20Grades"
+                               th:value="${post.get(19).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user20Grades"
+                               th:value="${post.get(19).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user20Grades"
+                               th:value="${post.get(19).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user20Grades"
+                               th:value="${post.get(19).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user20Grades"
+                               th:value="${post.get(19).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user20Grades"
+                               th:value="${post.get(19).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user20Grades"
+                               th:value="${post.get(19).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user20Grades"
+                               th:value="${post.get(19).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user21-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user21Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user21Grades"
+                               th:value="${post.get(20).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user21Grades"
+                               th:value="${post.get(20).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user21Grades"
+                               th:value="${post.get(20).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user21Grades"
+                               th:value="${post.get(20).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user21Grades"
+                               th:value="${post.get(20).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user21Grades"
+                               th:value="${post.get(20).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user21Grades"
+                               th:value="${post.get(20).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user21Grades"
+                               th:value="${post.get(20).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user22-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user22Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user22Grades"
+                               th:value="${post.get(21).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user22Grades"
+                               th:value="${post.get(21).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user22Grades"
+                               th:value="${post.get(21).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user22Grades"
+                               th:value="${post.get(21).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user22Grades"
+                               th:value="${post.get(21).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user22Grades"
+                               th:value="${post.get(21).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user22Grades"
+                               th:value="${post.get(21).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user22Grades"
+                               th:value="${post.get(21).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user23-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user23Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user23Grades"
+                               th:value="${post.get(22).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user23Grades"
+                               th:value="${post.get(22).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user23Grades"
+                               th:value="${post.get(22).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user23Grades"
+                               th:value="${post.get(22).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user23Grades"
+                               th:value="${post.get(22).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user23Grades"
+                               th:value="${post.get(22).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user23Grades"
+                               th:value="${post.get(22).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user23Grades"
+                               th:value="${post.get(22).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user24-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user24Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user24Grades"
+                               th:value="${post.get(23).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user24Grades"
+                               th:value="${post.get(23).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user24Grades"
+                               th:value="${post.get(23).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user24Grades"
+                               th:value="${post.get(23).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user24Grades"
+                               th:value="${post.get(23).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user24Grades"
+                               th:value="${post.get(23).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user24Grades"
+                               th:value="${post.get(23).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user24Grades"
+                               th:value="${post.get(23).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user25-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user25Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user25Grades"
+                               th:value="${post.get(24).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user25Grades"
+                               th:value="${post.get(24).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user25Grades"
+                               th:value="${post.get(24).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user25Grades"
+                               th:value="${post.get(24).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user25Grades"
+                               th:value="${post.get(24).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user25Grades"
+                               th:value="${post.get(24).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user25Grades"
+                               th:value="${post.get(24).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user25Grades"
+                               th:value="${post.get(24).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user26-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user26Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user26Grades"
+                               th:value="${post.get(25).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user26Grades"
+                               th:value="${post.get(25).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user26Grades"
+                               th:value="${post.get(25).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user26Grades"
+                               th:value="${post.get(25).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user26Grades"
+                               th:value="${post.get(25).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user26Grades"
+                               th:value="${post.get(25).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user26Grades"
+                               th:value="${post.get(25).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user26Grades"
+                               th:value="${post.get(25).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user27-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user27Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user27Grades"
+                               th:value="${post.get(26).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user27Grades"
+                               th:value="${post.get(26).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user27Grades"
+                               th:value="${post.get(26).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user27Grades"
+                               th:value="${post.get(26).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user27Grades"
+                               th:value="${post.get(26).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user27Grades"
+                               th:value="${post.get(26).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user27Grades"
+                               th:value="${post.get(26).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user27Grades"
+                               th:value="${post.get(26).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user28-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user28Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user28Grades"
+                               th:value="${post.get(27).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user28Grades"
+                               th:value="${post.get(27).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user28Grades"
+                               th:value="${post.get(27).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user28Grades"
+                               th:value="${post.get(27).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user28Grades"
+                               th:value="${post.get(27).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user28Grades"
+                               th:value="${post.get(27).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user28Grades"
+                               th:value="${post.get(27).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user28Grades"
+                               th:value="${post.get(27).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user29-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user29Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user29Grades"
+                               th:value="${post.get(28).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user29Grades"
+                               th:value="${post.get(28).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user29Grades"
+                               th:value="${post.get(28).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user29Grades"
+                               th:value="${post.get(28).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user29Grades"
+                               th:value="${post.get(28).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user29Grades"
+                               th:value="${post.get(28).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user29Grades"
+                               th:value="${post.get(28).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user29Grades"
+                               th:value="${post.get(28).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user30-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user30Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user30Grades"
+                               th:value="${post.get(29).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user30Grades"
+                               th:value="${post.get(29).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user30Grades"
+                               th:value="${post.get(29).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user30Grades"
+                               th:value="${post.get(29).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user30Grades"
+                               th:value="${post.get(29).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user30Grades"
+                               th:value="${post.get(29).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user30Grades"
+                               th:value="${post.get(29).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user30Grades"
+                               th:value="${post.get(29).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user31-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user31Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user31Grades"
+                               th:value="${post.get(30).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user31Grades"
+                               th:value="${post.get(30).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user31Grades"
+                               th:value="${post.get(30).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user31Grades"
+                               th:value="${post.get(30).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user31Grades"
+                               th:value="${post.get(30).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user31Grades"
+                               th:value="${post.get(30).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user31Grades"
+                               th:value="${post.get(30).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user31Grades"
+                               th:value="${post.get(30).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user32-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user32Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user32Grades"
+                               th:value="${post.get(31).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user32Grades"
+                               th:value="${post.get(31).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user32Grades"
+                               th:value="${post.get(31).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user32Grades"
+                               th:value="${post.get(31).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user32Grades"
+                               th:value="${post.get(31).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user32Grades"
+                               th:value="${post.get(31).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user32Grades"
+                               th:value="${post.get(31).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user32Grades"
+                               th:value="${post.get(31).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user33-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user33Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user33Grades"
+                               th:value="${post.get(32).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user33Grades"
+                               th:value="${post.get(32).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user33Grades"
+                               th:value="${post.get(32).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user33Grades"
+                               th:value="${post.get(32).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user33Grades"
+                               th:value="${post.get(32).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user33Grades"
+                               th:value="${post.get(32).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user33Grades"
+                               th:value="${post.get(32).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user33Grades"
+                               th:value="${post.get(32).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user34-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user34Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user34Grades"
+                               th:value="${post.get(33).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user34Grades"
+                               th:value="${post.get(33).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user34Grades"
+                               th:value="${post.get(33).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user34Grades"
+                               th:value="${post.get(33).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user34Grades"
+                               th:value="${post.get(33).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user34Grades"
+                               th:value="${post.get(33).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user34Grades"
+                               th:value="${post.get(33).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user34Grades"
+                               th:value="${post.get(33).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user35-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user35Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user35Grades"
+                               th:value="${post.get(34).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user35Grades"
+                               th:value="${post.get(34).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user35Grades"
+                               th:value="${post.get(34).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user35Grades"
+                               th:value="${post.get(34).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user35Grades"
+                               th:value="${post.get(34).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user35Grades"
+                               th:value="${post.get(34).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user35Grades"
+                               th:value="${post.get(34).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user35Grades"
+                               th:value="${post.get(34).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user36-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user36Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user36Grades"
+                               th:value="${post.get(35).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user36Grades"
+                               th:value="${post.get(35).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user36Grades"
+                               th:value="${post.get(35).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user36Grades"
+                               th:value="${post.get(35).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user36Grades"
+                               th:value="${post.get(35).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user36Grades"
+                               th:value="${post.get(35).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user36Grades"
+                               th:value="${post.get(35).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user36Grades"
+                               th:value="${post.get(35).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+
+                </tr>
+                <!--                    user37-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user37Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user37Grades"
+                               th:value="${post.get(36).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user37Grades"
+                               th:value="${post.get(36).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user37Grades"
+                               th:value="${post.get(36).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user37Grades"
+                               th:value="${post.get(36).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user37Grades"
+                               th:value="${post.get(36).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user37Grades"
+                               th:value="${post.get(36).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user37Grades"
+                               th:value="${post.get(36).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user37Grades"
+                               th:value="${post.get(36).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user38-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user38Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user38Grades"
+                               th:value="${post.get(37).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user38Grades"
+                               th:value="${post.get(37).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user38Grades"
+                               th:value="${post.get(37).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user38Grades"
+                               th:value="${post.get(37).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user38Grades"
+                               th:value="${post.get(37).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user38Grades"
+                               th:value="${post.get(37).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user38Grades"
+                               th:value="${post.get(37).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user38Grades"
+                               th:value="${post.get(37).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user39-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user39Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user39Grades"
+                               th:value="${post.get(38).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user39Grades"
+                               th:value="${post.get(38).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user39Grades"
+                               th:value="${post.get(38).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user39Grades"
+                               th:value="${post.get(38).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user39Grades"
+                               th:value="${post.get(38).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user39Grades"
+                               th:value="${post.get(38).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user39Grades"
+                               th:value="${post.get(38).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user39Grades"
+                               th:value="${post.get(38).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
+                </tr>
+                <!--                    user40-->
+                <tr>
+                    <td class="middle-align-one">
+                        <input type="text" class="text-input-user" readonly name="user40Grades"
+                               placeholder="ид"
+                               minlength="1">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user40Grades"
+                               th:value="${post.get(39).getUsername()}"
+                               placeholder="Инициалы"
+                               minlength="1"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user40Grades"
+                               th:value="${post.get(39).getGradeFundamentalsPhilosophy()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="3" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user40Grades"
+                               th:value="${post.get(39).getGradeEnglishLanguage()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user40Grades"
+                               th:value="${post.get(39).getGradePhysicalTraining()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user40Grades"
+                               th:value="${post.get(39).getGradeLegalSupportProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user40Grades"
+                               th:value="${post.get(39).getGradeNumericalMethods()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user40Grades"
+                               th:value="${post.get(39).getGradeManagementProfessionalActivity()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+                    <td class="text-center">
+                        <input type="text" class="text-input-grade-user" name="user40Grades"
+                               th:value="${post.get(39).getGradeMathematicalModels()}"
+                               placeholder="Оцен"
+                               minlength="1"
+                               maxlength="3"
+                               size="2" autocomplete="off">
+                    </td>
+
                 </tr>
                 </tbody>
             </table>
@@ -984,6 +3073,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="/js/id.js"></script>
+    <script src="/js/as1.js"></script>
     <script>
         if (localStorage.getItem('month') !== null) {
             sBtn_text.innerText = localStorage.getItem('month')
