@@ -61,20 +61,23 @@
                 </div>
                 <p>
                     <a href="http://localhost:8080/api/students/is_1_1/course_1/semester_1/september">
-                        <input class="hidden-xs-control-label-m-t-20" type="button" value="1 Курс"/>
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="1 Курс"
+                               onclick="localStorage.clear()"/>
                     </a>
 
-                    <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_1/september">
+                    <a href="">
                         <input class="hidden-xs-control-label-m-t-20" type="button" value="2 Курс"/>
                     </a>
 
                     <a href="http://localhost:8080/api/students/is_1_1/course_3/semester_1/september">
-                        <input class="hidden-xs-control-label-m-t-20" type="button" value="3 Курс"/>
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="3 Курс"
+                               onclick="localStorage.clear()"/>
                     </a>
                     <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/september">
-                        <input class="hidden-xs-control-label-m-t-20" type="button" value="4 Курс"/>
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="4 Курс"
+                               onclick="localStorage.clear()"/>
                     </a>
-                    
+
                 </p>
             </div>
             <div class="col-xs-1-2">
@@ -185,7 +188,8 @@
                     <td class="text-center" th:text="${post.get(0).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(0).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(0).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(0).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(0).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(0).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -200,7 +204,8 @@
                     <td class="text-center" th:text="${post.get(1).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(1).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(1).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(1).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(1).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(1).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -215,7 +220,8 @@
                     <td class="text-center" th:text="${post.get(2).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(2).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(2).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(2).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(2).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(2).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -230,7 +236,8 @@
                     <td class="text-center" th:text="${post.get(3).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(3).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(3).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(3).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(3).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(3).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -245,7 +252,8 @@
                     <td class="text-center" th:text="${post.get(4).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(4).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(4).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(4).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(4).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(4).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -260,7 +268,8 @@
                     <td class="text-center" th:text="${post.get(5).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(5).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(5).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(5).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(5).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(5).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -275,7 +284,8 @@
                     <td class="text-center" th:text="${post.get(6).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(6).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(6).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(6).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(6).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(6).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -290,7 +300,8 @@
                     <td class="text-center" th:text="${post.get(7).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(7).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(7).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(7).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(7).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(7).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -305,7 +316,8 @@
                     <td class="text-center" th:text="${post.get(8).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(8).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(8).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(8).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(8).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(8).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -320,7 +332,8 @@
                     <td class="text-center" th:text="${post.get(9).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(9).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(9).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(9).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(9).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(9).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -335,7 +348,8 @@
                     <td class="text-center" th:text="${post.get(10).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(10).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(10).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(10).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(10).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(10).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -350,7 +364,8 @@
                     <td class="text-center" th:text="${post.get(11).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(11).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(11).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(11).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(11).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(11).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -365,7 +380,8 @@
                     <td class="text-center" th:text="${post.get(12).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(12).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(12).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(12).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(12).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(12).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -380,7 +396,8 @@
                     <td class="text-center" th:text="${post.get(13).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(13).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(13).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(13).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(13).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(13).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -395,7 +412,8 @@
                     <td class="text-center" th:text="${post.get(14).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(14).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(14).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(14).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(14).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(14).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -410,7 +428,8 @@
                     <td class="text-center" th:text="${post.get(15).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(15).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(15).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(15).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(15).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(15).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -425,7 +444,8 @@
                     <td class="text-center" th:text="${post.get(16).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(16).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(16).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(16).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(16).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(16).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -440,7 +460,8 @@
                     <td class="text-center" th:text="${post.get(17).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(17).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(17).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(17).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(17).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(17).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -455,7 +476,8 @@
                     <td class="text-center" th:text="${post.get(18).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(18).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(18).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(18).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(18).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(18).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -470,7 +492,8 @@
                     <td class="text-center" th:text="${post.get(19).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(19).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(19).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(19).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(19).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(19).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -485,7 +508,8 @@
                     <td class="text-center" th:text="${post.get(20).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(20).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(20).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(20).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(20).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(20).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -500,7 +524,8 @@
                     <td class="text-center" th:text="${post.get(21).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(21).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(21).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(21).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(21).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(21).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -515,7 +540,8 @@
                     <td class="text-center" th:text="${post.get(22).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(22).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(22).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(22).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(22).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(22).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -530,7 +556,8 @@
                     <td class="text-center" th:text="${post.get(23).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(23).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(23).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(23).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(23).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(23).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -545,7 +572,8 @@
                     <td class="text-center" th:text="${post.get(24).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(24).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(24).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(24).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(24).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(24).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -560,7 +588,8 @@
                     <td class="text-center" th:text="${post.get(25).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(25).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(25).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(25).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(25).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(25).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -575,7 +604,8 @@
                     <td class="text-center" th:text="${post.get(26).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(26).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(26).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(26).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(26).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(26).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -590,7 +620,8 @@
                     <td class="text-center" th:text="${post.get(27).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(27).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(27).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(27).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(27).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(27).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -605,7 +636,8 @@
                     <td class="text-center" th:text="${post.get(28).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(28).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(28).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(28).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(28).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(28).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -620,7 +652,8 @@
                     <td class="text-center" th:text="${post.get(29).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(29).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(29).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(29).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(29).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(29).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -635,7 +668,8 @@
                     <td class="text-center" th:text="${post.get(30).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(30).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(30).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(30).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(30).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(30).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -650,7 +684,8 @@
                     <td class="text-center" th:text="${post.get(31).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(31).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(31).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(31).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(31).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(31).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -665,7 +700,8 @@
                     <td class="text-center" th:text="${post.get(32).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(32).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(32).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(32).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(32).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(32).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -680,7 +716,8 @@
                     <td class="text-center" th:text="${post.get(33).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(33).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(33).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(33).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(33).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(33).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -695,7 +732,8 @@
                     <td class="text-center" th:text="${post.get(34).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(34).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(34).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(34).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(34).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(34).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -710,7 +748,8 @@
                     <td class="text-center" th:text="${post.get(35).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(35).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(35).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(35).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(35).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(35).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -725,7 +764,8 @@
                     <td class="text-center" th:text="${post.get(36).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(36).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(36).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(36).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(36).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(36).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -740,7 +780,8 @@
                     <td class="text-center" th:text="${post.get(37).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(37).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(37).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(37).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(37).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(37).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -755,7 +796,8 @@
                     <td class="text-center" th:text="${post.get(38).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(38).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(38).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(38).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(38).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(38).getGradeComputerNetwork()}"></td>
 
                 </tr>
@@ -770,7 +812,8 @@
                     <td class="text-center" th:text="${post.get(39).getGradeElementsOfHigherMathematics()}"></td>
                     <td class="text-center" th:text="${post.get(39).getGradeDiscreteMath()}"></td>
                     <td class="text-center" th:text="${post.get(39).getGradeOperatingSystemsAndEnvironments()}"></td>
-                    <td class="text-center" th:text="${post.get(39).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(39).getGradeFundamentalsOfAlgorithmizationAndProgramming()}"></td>
                     <td class="text-center" th:text="${post.get(39).getGradeComputerNetwork()}"></td>
 
                 </tr>

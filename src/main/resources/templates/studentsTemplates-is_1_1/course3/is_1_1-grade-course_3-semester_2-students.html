@@ -51,20 +51,23 @@
                 </div>
                 <p>
                     <a href="http://localhost:8080/api/students/is_1_1/course_1/semester_1/september">
-                        <input class="hidden-xs-control-label-m-t-20" type="button" value="1 Курс"/>
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="1 Курс"
+                               onclick="localStorage.clear()"/>
                     </a>
 
                     <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_1/september">
-                        <input class="hidden-xs-control-label-m-t-20" type="button" value="2 Курс"/>
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="2 Курс"
+                               onclick="localStorage.clear()"/>
                     </a>
 
-                    <a href="http://localhost:8080/api/students/is_1_1/course_3/semester_1/september">
+                    <a href="">
                         <input class="hidden-xs-control-label-m-t-20" type="button" value="3 Курс"/>
                     </a>
                     <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/september">
-                        <input class="hidden-xs-control-label-m-t-20" type="button" value="4 Курс"/>
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="4 Курс"
+                               onclick="localStorage.clear()"/>
                     </a>
-                    
+
                 </p>
             </div>
             <div class="col-xs-1-2">
@@ -175,7 +178,8 @@
                     <td class="text-center" th:text="${post.get(0).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(0).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(0).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(0).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(0).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user2-->
@@ -189,7 +193,8 @@
                     <td class="text-center" th:text="${post.get(1).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(1).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(1).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(1).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(1).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user3-->
@@ -203,7 +208,8 @@
                     <td class="text-center" th:text="${post.get(2).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(2).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(2).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(2).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(2).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user4-->
@@ -217,7 +223,8 @@
                     <td class="text-center" th:text="${post.get(3).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(3).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(3).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(3).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(3).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user5-->
@@ -231,7 +238,8 @@
                     <td class="text-center" th:text="${post.get(4).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(4).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(4).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(4).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(4).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user6-->
@@ -245,7 +253,8 @@
                     <td class="text-center" th:text="${post.get(5).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(5).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(5).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(5).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(5).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user7-->
@@ -259,7 +268,8 @@
                     <td class="text-center" th:text="${post.get(6).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(6).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(6).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(6).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(6).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user8-->
@@ -273,7 +283,8 @@
                     <td class="text-center" th:text="${post.get(7).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(7).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(7).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(7).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(7).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user9-->
@@ -287,7 +298,8 @@
                     <td class="text-center" th:text="${post.get(8).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(8).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(8).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(8).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(8).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user10-->
@@ -301,7 +313,8 @@
                     <td class="text-center" th:text="${post.get(9).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(9).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(9).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(9).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(9).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user11-->
@@ -315,7 +328,8 @@
                     <td class="text-center" th:text="${post.get(10).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(10).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(10).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(10).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(10).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user12-->
@@ -329,7 +343,8 @@
                     <td class="text-center" th:text="${post.get(11).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(11).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(11).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(11).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(11).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user13-->
@@ -343,7 +358,8 @@
                     <td class="text-center" th:text="${post.get(12).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(12).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(12).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(12).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(12).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user14-->
@@ -357,7 +373,8 @@
                     <td class="text-center" th:text="${post.get(13).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(13).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(13).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(13).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(13).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user15-->
@@ -371,7 +388,8 @@
                     <td class="text-center" th:text="${post.get(14).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(14).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(14).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(14).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(14).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user16-->
@@ -385,7 +403,8 @@
                     <td class="text-center" th:text="${post.get(15).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(15).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(15).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(15).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(15).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user17-->
@@ -399,7 +418,8 @@
                     <td class="text-center" th:text="${post.get(16).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(16).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(16).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(16).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(16).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user18-->
@@ -413,7 +433,8 @@
                     <td class="text-center" th:text="${post.get(17).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(17).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(17).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(17).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(17).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user19-->
@@ -427,7 +448,8 @@
                     <td class="text-center" th:text="${post.get(18).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(18).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(18).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(18).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(18).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user20-->
@@ -441,7 +463,8 @@
                     <td class="text-center" th:text="${post.get(19).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(19).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(19).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(19).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(19).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user21-->
@@ -455,7 +478,8 @@
                     <td class="text-center" th:text="${post.get(20).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(20).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(20).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(20).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(20).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user22-->
@@ -469,7 +493,8 @@
                     <td class="text-center" th:text="${post.get(21).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(21).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(21).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(21).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(21).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user23-->
@@ -483,7 +508,8 @@
                     <td class="text-center" th:text="${post.get(22).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(22).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(22).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(22).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(22).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user24-->
@@ -497,7 +523,8 @@
                     <td class="text-center" th:text="${post.get(23).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(23).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(23).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(23).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(23).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user25-->
@@ -511,7 +538,8 @@
                     <td class="text-center" th:text="${post.get(24).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(24).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(24).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(24).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(24).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user26-->
@@ -525,7 +553,8 @@
                     <td class="text-center" th:text="${post.get(25).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(25).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(25).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(25).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(25).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user27-->
@@ -539,7 +568,8 @@
                     <td class="text-center" th:text="${post.get(26).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(26).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(26).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(26).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(26).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user28-->
@@ -553,7 +583,8 @@
                     <td class="text-center" th:text="${post.get(27).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(27).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(27).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(27).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(27).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user29-->
@@ -567,7 +598,8 @@
                     <td class="text-center" th:text="${post.get(28).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(28).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(28).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(28).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(28).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user30-->
@@ -581,7 +613,8 @@
                     <td class="text-center" th:text="${post.get(29).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(29).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(29).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(29).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(29).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user31-->
@@ -595,7 +628,8 @@
                     <td class="text-center" th:text="${post.get(30).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(30).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(30).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(30).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(30).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user32-->
@@ -609,7 +643,8 @@
                     <td class="text-center" th:text="${post.get(31).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(31).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(31).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(31).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(31).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user33-->
@@ -623,7 +658,8 @@
                     <td class="text-center" th:text="${post.get(32).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(32).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(32).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(32).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(32).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user34-->
@@ -637,7 +673,8 @@
                     <td class="text-center" th:text="${post.get(33).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(33).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(33).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(33).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(33).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user35-->
@@ -651,7 +688,8 @@
                     <td class="text-center" th:text="${post.get(34).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(34).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(34).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(34).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(34).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user36-->
@@ -665,7 +703,8 @@
                     <td class="text-center" th:text="${post.get(35).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(35).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(35).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(35).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(35).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user37-->
@@ -679,7 +718,8 @@
                     <td class="text-center" th:text="${post.get(36).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(36).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(36).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(36).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(36).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user38-->
@@ -693,7 +733,8 @@
                     <td class="text-center" th:text="${post.get(37).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(37).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(37).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(37).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(37).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user39-->
@@ -707,7 +748,8 @@
                     <td class="text-center" th:text="${post.get(38).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(38).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(38).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(38).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(38).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 <!--                    user40-->
@@ -721,7 +763,8 @@
                     <td class="text-center" th:text="${post.get(39).getGradeSupportTestingSoftwareModules()}"></td>
                     <td class="text-center" th:text="${post.get(39).getGradeMobileApplicationDevelopment()}"></td>
                     <td class="text-center" th:text="${post.get(39).getGradeSystemProgramming()}"></td>
-                    <td class="text-center" th:text="${post.get(39).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(39).getGradeDatabaseDevelopmentProtectionTechnology()}"></td>
 
                 </tr>
                 </tbody>

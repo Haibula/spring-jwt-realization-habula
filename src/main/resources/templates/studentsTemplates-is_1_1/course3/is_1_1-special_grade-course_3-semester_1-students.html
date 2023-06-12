@@ -51,20 +51,23 @@
                 </div>
                 <p>
                     <a href="http://localhost:8080/api/students/is_1_1/course_1/semester_1/september">
-                        <input class="hidden-xs-control-label-m-t-20" type="button" value="1 Курс"/>
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="1 Курс"
+                               onclick="localStorage.clear()"/>
                     </a>
 
                     <a href="http://localhost:8080/api/students/is_1_1/course_2/semester_1/september">
-                        <input class="hidden-xs-control-label-m-t-20" type="button" value="2 Курс"/>
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="2 Курс"
+                               onclick="localStorage.clear()"/>
                     </a>
 
-                    <a href="http://localhost:8080/api/students/is_1_1/course_3/semester_1/september">
+                    <a href="">
                         <input class="hidden-xs-control-label-m-t-20" type="button" value="3 Курс"/>
                     </a>
                     <a href="http://localhost:8080/api/students/is_1_1/course_4/semester_1/september">
-                        <input class="hidden-xs-control-label-m-t-20" type="button" value="4 Курс"/>
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="4 Курс"
+                               onclick="localStorage.clear()"/>
                     </a>
-                    
+
                 </p>
             </div>
             <div class="col-xs-1-2">
@@ -168,7 +171,8 @@
                     <td class="text-center" th:text="${post.get(0).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(0).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(0).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(0).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(0).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(0).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(0).getEducationalPractice()}"></td>
 
@@ -180,7 +184,8 @@
                     <td class="text-center" th:text="${post.get(1).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(1).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(1).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(1).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(1).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(1).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(1).getEducationalPractice()}"></td>
 
@@ -192,7 +197,8 @@
                     <td class="text-center" th:text="${post.get(2).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(2).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(2).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(2).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(2).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(2).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(2).getEducationalPractice()}"></td>
 
@@ -204,7 +210,8 @@
                     <td class="text-center" th:text="${post.get(3).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(3).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(3).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(3).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(3).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(3).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(3).getEducationalPractice()}"></td>
 
@@ -216,7 +223,8 @@
                     <td class="text-center" th:text="${post.get(4).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(4).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(4).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(4).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(4).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(4).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(4).getEducationalPractice()}"></td>
 
@@ -228,7 +236,8 @@
                     <td class="text-center" th:text="${post.get(5).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(5).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(5).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(5).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(5).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(5).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(5).getEducationalPractice()}"></td>
 
@@ -240,7 +249,8 @@
                     <td class="text-center" th:text="${post.get(6).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(6).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(6).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(6).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(6).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(6).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(6).getEducationalPractice()}"></td>
 
@@ -252,7 +262,8 @@
                     <td class="text-center" th:text="${post.get(7).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(7).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(7).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(7).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(7).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(7).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(7).getEducationalPractice()}"></td>
 
@@ -264,7 +275,8 @@
                     <td class="text-center" th:text="${post.get(8).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(8).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(8).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(8).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(8).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(8).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(8).getEducationalPractice()}"></td>
 
@@ -276,7 +288,8 @@
                     <td class="text-center" th:text="${post.get(9).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(9).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(9).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(9).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(9).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(9).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(9).getEducationalPractice()}"></td>
 
@@ -288,7 +301,8 @@
                     <td class="text-center" th:text="${post.get(10).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(10).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(10).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(10).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(10).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(10).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(10).getEducationalPractice()}"></td>
 
@@ -300,7 +314,8 @@
                     <td class="text-center" th:text="${post.get(11).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(11).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(11).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(11).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(11).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(11).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(11).getEducationalPractice()}"></td>
 
@@ -312,7 +327,8 @@
                     <td class="text-center" th:text="${post.get(12).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(12).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(12).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(12).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(12).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(12).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(12).getEducationalPractice()}"></td>
 
@@ -324,7 +340,8 @@
                     <td class="text-center" th:text="${post.get(13).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(13).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(13).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(13).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(13).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(13).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(13).getEducationalPractice()}"></td>
 
@@ -336,7 +353,8 @@
                     <td class="text-center" th:text="${post.get(14).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(14).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(14).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(14).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(14).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(14).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(14).getEducationalPractice()}"></td>
 
@@ -348,7 +366,8 @@
                     <td class="text-center" th:text="${post.get(15).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(15).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(15).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(15).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(15).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(15).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(15).getEducationalPractice()}"></td>
 
@@ -360,7 +379,8 @@
                     <td class="text-center" th:text="${post.get(16).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(16).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(16).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(16).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(16).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(16).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(16).getEducationalPractice()}"></td>
 
@@ -372,7 +392,8 @@
                     <td class="text-center" th:text="${post.get(17).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(17).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(17).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(17).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(17).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(17).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(17).getEducationalPractice()}"></td>
 
@@ -384,7 +405,8 @@
                     <td class="text-center" th:text="${post.get(18).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(18).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(18).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(18).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(18).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(18).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(18).getEducationalPractice()}"></td>
 
@@ -396,7 +418,8 @@
                     <td class="text-center" th:text="${post.get(19).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(19).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(19).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(19).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(19).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(19).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(19).getEducationalPractice()}"></td>
 
@@ -408,7 +431,8 @@
                     <td class="text-center" th:text="${post.get(20).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(20).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(20).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(20).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(20).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(20).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(20).getEducationalPractice()}"></td>
 
@@ -420,7 +444,8 @@
                     <td class="text-center" th:text="${post.get(21).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(21).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(21).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(21).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(21).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(21).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(21).getEducationalPractice()}"></td>
 
@@ -432,7 +457,8 @@
                     <td class="text-center" th:text="${post.get(22).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(22).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(22).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(22).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(22).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(22).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(22).getEducationalPractice()}"></td>
 
@@ -444,7 +470,8 @@
                     <td class="text-center" th:text="${post.get(23).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(23).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(23).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(23).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(23).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(23).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(23).getEducationalPractice()}"></td>
 
@@ -456,7 +483,8 @@
                     <td class="text-center" th:text="${post.get(24).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(24).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(24).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(24).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(24).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(24).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(24).getEducationalPractice()}"></td>
 
@@ -468,7 +496,8 @@
                     <td class="text-center" th:text="${post.get(25).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(25).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(25).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(25).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(25).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(25).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(25).getEducationalPractice()}"></td>
 
@@ -480,7 +509,8 @@
                     <td class="text-center" th:text="${post.get(26).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(26).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(26).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(26).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(26).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(26).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(26).getEducationalPractice()}"></td>
 
@@ -492,7 +522,8 @@
                     <td class="text-center" th:text="${post.get(27).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(27).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(27).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(27).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(27).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(27).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(27).getEducationalPractice()}"></td>
 
@@ -504,7 +535,8 @@
                     <td class="text-center" th:text="${post.get(28).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(28).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(28).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(28).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(28).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(28).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(28).getEducationalPractice()}"></td>
 
@@ -516,7 +548,8 @@
                     <td class="text-center" th:text="${post.get(29).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(29).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(29).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(29).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(29).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(29).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(29).getEducationalPractice()}"></td>
 
@@ -528,7 +561,8 @@
                     <td class="text-center" th:text="${post.get(30).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(30).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(30).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(30).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(30).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(30).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(30).getEducationalPractice()}"></td>
 
@@ -540,7 +574,8 @@
                     <td class="text-center" th:text="${post.get(31).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(31).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(31).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(31).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(31).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(31).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(31).getEducationalPractice()}"></td>
 
@@ -552,7 +587,8 @@
                     <td class="text-center" th:text="${post.get(32).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(32).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(32).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(32).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(32).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(32).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(32).getEducationalPractice()}"></td>
 
@@ -564,7 +600,8 @@
                     <td class="text-center" th:text="${post.get(33).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(33).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(33).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(33).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(33).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(33).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(33).getEducationalPractice()}"></td>
 
@@ -576,7 +613,8 @@
                     <td class="text-center" th:text="${post.get(34).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(34).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(34).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(34).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(34).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(34).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(34).getEducationalPractice()}"></td>
 
@@ -588,7 +626,8 @@
                     <td class="text-center" th:text="${post.get(35).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(35).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(35).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(35).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(35).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(35).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(35).getEducationalPractice()}"></td>
 
@@ -600,7 +639,8 @@
                     <td class="text-center" th:text="${post.get(36).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(36).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(36).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(36).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(36).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(36).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(36).getEducationalPractice()}"></td>
 
@@ -612,7 +652,8 @@
                     <td class="text-center" th:text="${post.get(37).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(37).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(37).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(37).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(37).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(37).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(37).getEducationalPractice()}"></td>
 
@@ -624,7 +665,8 @@
                     <td class="text-center" th:text="${post.get(38).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(38).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(38).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(38).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(38).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(38).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(38).getEducationalPractice()}"></td>
 
@@ -636,7 +678,8 @@
                     <td class="text-center" th:text="${post.get(39).getDifOffsetPsychology()}"></td>
                     <td class="text-center" th:text="${post.get(39).getDifOffsetLifeSafety()}"></td>
                     <td class="text-center" th:text="${post.get(39).getDifOffsetStandardizationCertification()}"></td>
-                    <td class="text-center" th:text="${post.get(39).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
+                    <td class="text-center"
+                        th:text="${post.get(39).getDifOffsetDatabaseDevelopmentProtectionTechnology()}"></td>
                     <td class="text-center" th:text="${post.get(39).getOffsetPhysicalTraining()}"></td>
                     <td class="text-center" th:text="${post.get(39).getEducationalPractice()}"></td>
 

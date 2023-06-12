@@ -27,14 +27,8 @@
         <div class="nav-bar-course_4-semester_2-special-greade">
             <div class="logo">
                 <ion-icon name="school-outline"></ion-icon>
-                <input type="text" class="input-group-color"
-                       name="inputGroup"
-                       th:value="${groupName.get(0).inputGroup}"
-                       required
-                       placeholder="Название группы"
-                       autocomplete="off"
-                       style="color: white"
-                       minlength="1"></div>
+                <h8 th:text="${groupName.get(0).inputGroup}"></h8>
+            </div>
 
             <div class="nav-links">
                 <ul>
@@ -57,17 +51,20 @@
                 </div>
                 <p>
                     <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_1/semester_1/september">
-                        <input class="hidden-xs-control-label-m-t-20" type="button" value="1 Курс"/>
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="1 Курс"
+                               onclick="localStorage.clear()"/>
                     </a>
 
                     <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_2/semester_1/september">
-                        <input class="hidden-xs-control-label-m-t-20" type="button" value="2 Курс"/>
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="2 Курс"
+                               onclick="localStorage.clear()"/>
                     </a>
 
                     <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_3/semester_1/september">
-                        <input class="hidden-xs-control-label-m-t-20" type="button" value="3 Курс"/>
+                        <input class="hidden-xs-control-label-m-t-20" type="button" value="3 Курс"
+                               onclick="localStorage.clear()"/>
                     </a>
-                    <a href="http://localhost:8080/api/moderator/moderator_is_1_1/course_4/semester_1/september">
+                    <a href="">
                         <input class="hidden-xs-control-label-m-t-20" type="button" value="4 Курс"/>
                     </a>
                     <input class="hidden-xs-control-label-m-t-20" type="submit" value="Cохранить"/>

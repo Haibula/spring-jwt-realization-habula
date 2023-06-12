@@ -1,6 +1,7 @@
 package com.example.demoauth.service.moderatorService.moderator_is1Service.course2;
 
 import com.example.demoauth.models.grade_is1.models.course2.Grade_IS_1_1Course2Semester1;
+import com.example.demoauth.repository.is1Repository.course1.Grade_IS_1_1Course1Semester1Repository;
 import com.example.demoauth.repository.is1Repository.course2.Grade_IS_1_1Course2Semester1Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,12 +12,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ModeratorGradeServiceIS1Course2Semester1 {
     @Autowired
     Grade_IS_1_1Course2Semester1Repository gradeIs11Course2Semester1Repository;
-
+    @Autowired
+    Grade_IS_1_1Course1Semester1Repository grade_is_1_1Course1Semester1Repository;
     //GetMappingGradeCourse2Semester1
     public void getMappingMethodModer_is_1_1GreadeСourse2Semester1(@PathVariable String month, Model model) {
 

@@ -15,4 +15,3 @@ options.forEach(option => {
 
     })
 })
-

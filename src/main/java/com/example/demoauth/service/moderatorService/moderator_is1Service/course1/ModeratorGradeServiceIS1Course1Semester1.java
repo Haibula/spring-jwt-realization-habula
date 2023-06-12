@@ -23,8 +23,17 @@ public class ModeratorGradeServiceIS1Course1Semester1 {
     Progress_IS_1_1_Repository progress_is_1_1_repository;
 
     // нужен для показа номера группы в семестрах
+    // Подумай как в других курсах реализовать замену названии группы (ИС1, ИС2 и.т.д)
     public void getMappingMethodModer_is_1_1GreadeСourse1Semester1SendGroupName(Model model) {
         List<Grade_IS_1_1Course1Semester1> res = grade_is_1_1Course1Semester1Repository.findAll();
+        List<Grade_IS_1_1Course1Semester1> groupName = new ArrayList<>();
+
+        for (int i = 0; i < res.size(); i++) {
+            if (res.get(i).getMonth().equals("september")) {
+                groupName.add(res.get(i));
+            }
+        }
+
         res.sort(Comparator.comparingInt(Grade_IS_1_1Course1Semester1::getUserID));
         List<Grade_IS_1_1Course1Semester1> voidList = new ArrayList<>();
         for (int i = 0; i < 50; i++) {
@@ -33,7 +42,7 @@ public class ModeratorGradeServiceIS1Course1Semester1 {
         if (res.isEmpty()) {
             model.addAttribute("groupName", voidList);
         } else {
-            model.addAttribute("groupName", res);
+            model.addAttribute("groupName", groupName);
         }
     }
 
@@ -1238,7 +1247,6 @@ public class ModeratorGradeServiceIS1Course1Semester1 {
             grade_is_1_1Course1Semester1User16.setGradePhysicalTraining(user16PhysicalTraining);
             grade_is_1_1Course1Semester1User16.setInputGroup(inputGroup);
             grade_is_1_1Course1Semester1Repository.save(grade_is_1_1Course1Semester1User16);
-
 
             //            //user17
 

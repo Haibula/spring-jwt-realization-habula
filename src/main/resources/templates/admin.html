@@ -25,8 +25,10 @@
 <body>
 <form
         onsubmit="
+
 const optionMenu = document.querySelector('select');
 let res;
+
 if(optionMenu.options.item(0).selected){
     res = optionMenu.options.item(0).innerHTML.substring(optionMenu.options.item(0).innerHTML.indexOf(' '));
 }else if(optionMenu.options.item(1).selected){
@@ -147,6 +149,7 @@ return false;
         localStorage.setItem("month", "1 семестр Сентябрь")
     }
 </script>
+
 </body>
 
 </html>
