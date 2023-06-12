@@ -27,14 +27,8 @@
         <div class="nav-bar-course_1-semester_1">
             <div class="logo">
                 <ion-icon name="school-outline"></ion-icon>
-                <input type="text" class="input-group-color"
-                       name="inputGroup"
-                       th:value="${groupName.get(0).inputGroup}"
-                       required
-                       placeholder="Название группы"
-                       autocomplete="off"
-                       style="color: white"
-                       minlength="1"></div>
+                <h8 th:text="${groupName.get(0).inputGroup}"></h8>
+            </div>
             <div class="nav-links">
                 <ul>
                     <li>
