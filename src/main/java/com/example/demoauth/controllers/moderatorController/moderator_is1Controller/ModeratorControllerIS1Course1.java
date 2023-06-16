@@ -1,9 +1,7 @@
 package com.example.demoauth.controllers.moderatorController.moderator_is1Controller;
 
-import com.example.demoauth.service.moderatorService.moderator_is1Service.course1.ModeratorGradeServiceIS1Course1Semester1;
-import com.example.demoauth.service.moderatorService.moderator_is1Service.course1.ModeratorGradeServiceIS1Course1Semester2;
-import com.example.demoauth.service.moderatorService.moderator_is1Service.course1.ModeratorSpecialGradeServiceIS1Course1Semester1;
-import com.example.demoauth.service.moderatorService.moderator_is1Service.course1.ModeratorSpecialGradeServiceIS1Course1Semester2;
+import com.example.demoauth.service.moderatorService.moderator_is1Service.ModeratorGradeServiceIS1DeleteService;
+import com.example.demoauth.service.moderatorService.moderator_is1Service.course1.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -26,6 +24,9 @@ public class ModeratorControllerIS1Course1 {
     ModeratorSpecialGradeServiceIS1Course1Semester1 moderatorSpecialGradeServiceIS11Course1Semester1;
     @Autowired
     ModeratorSpecialGradeServiceIS1Course1Semester2 moderatorSpecialGradeServiceIS11Course1Semester2;
+    @Autowired
+    ModeratorGradeServiceIS1DeleteService moderatorGradeServiceIS1DeleteService;
+
 
     //GetMappingGradeCourse1Semester1
     @GetMapping("/moderator_is_1_1/course_1/semester_1/{month}")
@@ -57,13 +58,13 @@ public class ModeratorControllerIS1Course1 {
         return "redirect:/api/moderator/moderator_is_1_1/course_1/semester_1/{month}";
     }
 
-
     //GetMappingGradeCourse1Semester2
     @GetMapping("/moderator_is_1_1/course_1/semester_2/{month}")
     @PreAuthorize("hasRole('MODERATOR_IS_1_1')")
     public String moder_is_1_1GreadeСourse1Semester2(@PathVariable String month, Model model) {
         moderatorGradeServiceIS11Course1Semester2.getMappingModer_is_1_1GreadeСourse1Semester2(month, model);
         moderatorGradeServiceIS11Course1Semester1.getMappingMethodModer_is_1_1GreadeСourse1Semester1SendGroupName(model);
+
         ArrayList<String> arrayList = new ArrayList<>();
         arrayList.add("january");
         arrayList.add("february");
@@ -129,5 +130,12 @@ public class ModeratorControllerIS1Course1 {
         return "redirect:/api/moderator/moderator_is_1_1/course_1/semester_2/special_grade";
     }
 
+
+    //DeleteAll
+    @GetMapping("/deleteAll")
+    public String deleteModer_is_1_1GreadeСourse1Semester1() {
+        moderatorGradeServiceIS1DeleteService.deleteAllDate();
+        return "delete-page";
+    }
 
 }

@@ -57,6 +57,28 @@
     color: white;
 
 }
+.hidden-xs-control-label-m-t-20-button-clear {
+    padding: 10px 20px;
+    border-top: 1px solid #2c00b0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    font-style: italic;
+    transition: all 200ms;
+    background-color: #c73838;
+}
+
+.hidden-xs-control-label-m-t-20-button-clear:hover {
+    color: white;
+    border-top: 1px solid #2c00b0;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: #c73838;
+    box-shadow: 1px 1px 1px rgba(252, 252, 252, 0.4);
+}
 
 .hidden-xs-control-label-m-t-20 {
     padding: 10px 20px;

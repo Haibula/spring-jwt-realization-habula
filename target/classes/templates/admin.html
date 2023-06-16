@@ -25,8 +25,10 @@
 <body>
 <form
         onsubmit="
+
 const optionMenu = document.querySelector('select');
 let res;
+
 if(optionMenu.options.item(0).selected){
     res = optionMenu.options.item(0).innerHTML.substring(optionMenu.options.item(0).innerHTML.indexOf(' '));
 }else if(optionMenu.options.item(1).selected){
@@ -70,29 +72,31 @@ return false;
                 <div class="col-sm-9 col-xs-12">
                     <div class="select-menu">
                         <div class="select-btn">
-                            <span class="sBtn-text">IS 1</span>
-                            <i class="bx bx-chevron-down"></i>
+                            <span class="sBtn-text" >IS 1</span>
+                            <i class="bx bx-chevron-down" ></i>
                         </div>
                         <ul class="options">
                             <li class="option">
-                                <a href ="http://localhost:8080/api/students/is_1_1/course_1/semester_1/september" target="_blank">
-                                    <span class="option-text">IS 1</span>
+                                <a href="http://localhost:8080/api/students/is_1_1/course_1/semester_1/september"
+                                   target="_blank">
+                                    <span id="group1" class="option-text"
+                                          th:text="${groupName.get(0).inputGroup}">IS 1</span>
                                 </a>
 
                             </li>
                             <li class="option">
                                 <a href="">
-                                    <span class="option-text">IS 2</span>
+                                    <span id="group2" class="option-text"></span>
                                 </a>
                             </li>
                             <li class="option">
                                 <a href="">
-                                    <span class="option-text">IS 3</span>
+                                    <span id="group3" class="option-text"></span>
                                 </a>
                             </li>
                             <li class="option">
                                 <a href="">
-                                    <span class="option-text">IS 4</span>
+                                    <span id="group4" class="option-text"></span>
                                 </a>
                             </li>
                         </ul>
@@ -144,8 +148,34 @@ return false;
     if (localStorage.getItem('month') !== null) {
         sBtn_text.innerText = localStorage.getItem('month')
     } else {
-        localStorage.setItem("month", "1 семестр Сентябрь")
+        localStorage.setItem("month", "IS1")
     }
+</script>
+
+<script>
+    let a = document.getElementById("group1");
+    let b = document.getElementById("group2");
+    let c = document.getElementById("group3");
+    let d = document.getElementById("group4");
+
+    if (a.innerText === "") {
+        a.innerText = "IS1 свободен"
+        a.style = "background: greenyellow"
+    }
+    if (b.innerText === "") {
+        b.innerText = "IS2 свободен"
+        b.style = "background: greenyellow"
+    }
+    if (c.innerText === "") {
+        c.innerText = "IS3 свободен"
+        c.style = "background: greenyellow"
+    }
+    if (d.innerText === "") {
+        d.innerText = "IS4 свободен"
+        d.style = "background: greenyellow"
+    }
+
+
 </script>
 </body>
 

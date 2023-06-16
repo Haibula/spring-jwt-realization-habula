@@ -101,31 +101,31 @@ public class AuthControllerService {
                         .findByName(ERole.ROLE_MODERATOR_IS_1_1)
                         .orElseThrow(() -> new RuntimeException("Error, Role ROLE_MODERATOR_IS_1_1 is not found"));
                 roles.add(mod_is_1_1_Role);
-            } else if (r.contains("moderator_is_1_2")) {
-                Role mod_is_1_2_Role = roleRepository
-                        .findByName(ERole.ROLE_MODERATOR_IS_1_2)
-                        .orElseThrow(() -> new RuntimeException("Error, Role ROLE_MODERATOR_IS_1_2 is not found"));
-                roles.add(mod_is_1_2_Role);
-            } else if (r.contains("moderator_is_1_3")) {
-                Role mod_is_1_3_Role = roleRepository
-                        .findByName(ERole.ROLE_MODERATOR_IS_1_3)
-                        .orElseThrow(() -> new RuntimeException("Error, Role ROLE_MODERATOR_IS_1_3 is not found"));
-                roles.add(mod_is_1_3_Role);
+            } else if (r.contains("moderator_is2")) {
+                Role mod_is2_Role = roleRepository
+                        .findByName(ERole.ROLE_MODERATOR_IS2)
+                        .orElseThrow(() -> new RuntimeException("Error, Role ROLE_MODERATOR_IS2 is not found"));
+                roles.add(mod_is2_Role);
+            } else if (r.contains("moderator_is3")) {
+                Role mod_is3_Role = roleRepository
+                        .findByName(ERole.ROLE_MODERATOR_IS3)
+                        .orElseThrow(() -> new RuntimeException("Error, Role ROLE_MODERATOR_IS3 is not found"));
+                roles.add(mod_is3_Role);
             } else if (r.contains("is_1_1")) {
                 Role is_1_1_Role = roleRepository
                         .findByName(ERole.ROLE_IS_1_1)
-                        .orElseThrow(() -> new RuntimeException("Error, Role ROLE_IS_1_1 is not found"));
+                        .orElseThrow(() -> new RuntimeException("Error, Role ROLE_IS1 is not found"));
                 roles.add(is_1_1_Role);
-            } else if (r.contains("is_1_2")) {
-                Role is_1_2_Role = roleRepository
-                        .findByName(ERole.ROLE_IS_1_2)
-                        .orElseThrow(() -> new RuntimeException("Error, Role ROLE_IS_1_2 is not found"));
-                roles.add(is_1_2_Role);
-            } else if (r.contains("is_1_3")) {
-                Role is_1_3_Role = roleRepository
-                        .findByName(ERole.ROLE_IS_1_3)
-                        .orElseThrow(() -> new RuntimeException("Error, Role ROLE_IS_1_3 is not found"));
-                roles.add(is_1_3_Role);
+            } else if (r.contains("is2")) {
+                Role is2_Role = roleRepository
+                        .findByName(ERole.ROLE_IS2)
+                        .orElseThrow(() -> new RuntimeException("Error, Role ROLE_IS2 is not found"));
+                roles.add(is2_Role);
+            } else if (r.contains("is3")) {
+                Role is3_Role = roleRepository
+                        .findByName(ERole.ROLE_IS3)
+                        .orElseThrow(() -> new RuntimeException("Error, Role ROLE_IS3 is not found"));
+                roles.add(is3_Role);
             }
         });
 

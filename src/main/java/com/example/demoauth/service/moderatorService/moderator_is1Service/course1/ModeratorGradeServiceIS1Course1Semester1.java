@@ -4,6 +4,14 @@ import com.example.demoauth.models.grade_is1.models.Progress_IS_1_1;
 import com.example.demoauth.models.grade_is1.models.course1.Grade_IS_1_1Course1Semester1;
 import com.example.demoauth.repository.is1Repository.Progress_IS_1_1_Repository;
 import com.example.demoauth.repository.is1Repository.course1.Grade_IS_1_1Course1Semester1Repository;
+import com.example.demoauth.repository.is1Repository.course1.Grade_IS_1_1Course1Semester2Repository;
+import com.example.demoauth.repository.is1Repository.course1.SpecialGrade_IS_1_1Course1Semester1Repository;
+import com.example.demoauth.repository.is1Repository.course2.Grade_IS_1_1Course2Semester1Repository;
+import com.example.demoauth.repository.is1Repository.course2.Grade_IS_1_1Course2Semester2Repository;
+import com.example.demoauth.repository.is1Repository.course3.Grade_IS_1_1Course3Semester1Repository;
+import com.example.demoauth.repository.is1Repository.course3.Grade_IS_1_1Course3Semester2Repository;
+import com.example.demoauth.repository.is1Repository.course4.Grade_IS_1_1Course4Semester1Repository;
+import com.example.demoauth.repository.is1Repository.course4.Grade_IS_1_1Course4Semester2Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
@@ -18,12 +26,10 @@ import java.util.List;
 public class ModeratorGradeServiceIS1Course1Semester1 {
     @Autowired
     Grade_IS_1_1Course1Semester1Repository grade_is_1_1Course1Semester1Repository;
-
     @Autowired
     Progress_IS_1_1_Repository progress_is_1_1_repository;
 
     // нужен для показа номера группы в семестрах
-    // Подумай как в других курсах реализовать замену названии группы (ИС1, ИС2 и.т.д)
     public void getMappingMethodModer_is_1_1GreadeСourse1Semester1SendGroupName(Model model) {
         List<Grade_IS_1_1Course1Semester1> res = grade_is_1_1Course1Semester1Repository.findAll();
         List<Grade_IS_1_1Course1Semester1> groupName = new ArrayList<>();

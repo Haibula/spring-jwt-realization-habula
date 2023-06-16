@@ -10,11 +10,11 @@ After project running, schema in the Database created. First of all, you need so
 
 ```
 INSERT INTO roles(name) VALUES('ROLE_IS_1_1');
-INSERT INTO roles(name) VALUES('ROLE_IS_1_2');
-INSERT INTO roles(name) VALUES('ROLE_IS_1_3');
+INSERT INTO roles(name) VALUES('ROLE_IS2');
+INSERT INTO roles(name) VALUES('ROLE_IS3');
 INSERT INTO roles(name) VALUES('ROLE_MODERATOR_IS_1_1');
-INSERT INTO roles(name) VALUES('ROLE_MODERATOR_IS_1_2');
-INSERT INTO roles(name) VALUES('ROLE_MODERATOR_IS_1_3');
+INSERT INTO roles(name) VALUES('ROLE_MODERATOR_IS2');
+INSERT INTO roles(name) VALUES('ROLE_MODERATOR_IS3');
 INSERT INTO roles(name) VALUES('ROLE_ADMIN');
 ```
 

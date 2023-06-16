@@ -949,7 +949,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="/js/id.js"></script>
     <script>
-        if (localStorage.getItem('month') !== null) {
+        if (localStorage.getItem('month') !== null && localStorage.getItem('month').length>5) {
             sBtn_text.innerText = localStorage.getItem('month')
         } else {
             localStorage.setItem("month", "1 семестр Сентябрь")

@@ -36,4 +36,3 @@ switch (localStorage.getItem('month')) {
         document.getElementById("nas").href = 'semester_2/special_grade';
         break;
 }
-// придумай что делать с 2 курсом

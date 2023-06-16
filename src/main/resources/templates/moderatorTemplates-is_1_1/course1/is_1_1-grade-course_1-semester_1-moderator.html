@@ -71,7 +71,11 @@
                         <input class="hidden-xs-control-label-m-t-20" type="button" value="4 Курс"
                                onclick="localStorage.clear()"/>
                     </a>
+
                     <input class="hidden-xs-control-label-m-t-20" type="submit" value="Cохранить"/>
+
+                    <input id="click" class="hidden-xs-control-label-m-t-20-button-clear" type="button" value="Очистить"/>
+
                 </p>
             </div>
             <div class="col-xs-1-2">
@@ -4335,6 +4339,18 @@
         } else {
             localStorage.setItem("month", "1 семестр Сентябрь")
         }
+    </script>
+    <!-- Октывает гет ссылку тем самым, когда конроллер срабатывает, то удаляет данные все дааные -->
+    <script>
+        document.getElementById('click').onclick = function () {
+            let result = prompt("Будут очищены все данные из всех курсов, вы уверены?\n\n" +
+                "Если да, то наберите 'Очистить'").toLowerCase(); // <-- для IE
+            if (result === "очистить") {
+                window.open('http://localhost:8080/api/moderator/deleteAll', '_top');
+            } else {
+                alert("Неверные данные")
+            }
+        };
     </script>
 </form>
 </body>
